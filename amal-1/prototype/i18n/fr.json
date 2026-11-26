@@ -1,0 +1,140 @@
+{
+  "actT": "Que faire ?",
+  "acts": [
+    "Si les fissures s'élargissent vite ou si vous entendez des craquements : quittez le bâtiment et éloignez-vous du bord",
+    "Appelez la Protection civile au 198, prévenez la municipalité, ne revenez qu'avec l'accord des autorités",
+    "Photographiez les fissures avec la date et marquez leurs extrémités pour suivre leur évolution",
+    "Signalez toute fuite d'eau ou d'assainissement : l'eau est le premier facteur de glissement",
+    "N'ajoutez pas d'étage et ne creusez pas de fondations sans étude géotechnique ni permis"
+  ],
+  "assume": [
+    "Méthode de Bishop simplifiée, cercles de glissement, 30 tranches, recherche automatique sur grille de centres avec deux raffinements",
+    "Pression d'eau hydrostatique sous la nappe (sans écoulement) ; le poids volumique saisi s'applique au-dessus et en dessous",
+    "Séisme pseudo-statique (force horizontale kh·W vers la mer)",
+    "Coupe 2D idéalisée : ne représente ni les failles, ni les ruptures non circulaires, ni l'érosion marine",
+    "Vérification : l'exemple ACADS 1(a) donne 0,985 pour une référence ≈ 0,99"
+  ],
+  "cBot": "Base (m)",
+  "calc": "Calcul en cours…",
+  "calc3": "Calcul en cours…",
+  "callD": "Appelez immédiatement en cas de nouvelles fissures, de fissures qui s'élargissent vite ou de craquements.",
+  "callT": "Protection civile",
+  "causeT": "Pourquoi la colline glisse-t-elle ?",
+  "causes": [
+    "Nature des roches : couches argileuses et sableuses fragiles, riches en failles et fractures",
+    "L'eau de pluie et des réseaux alourdit le sol et augmente la pression interstitielle, ce qui réduit le frottement",
+    "L'érosion marine sape le pied de la falaise",
+    "La densité des constructions et les fouilles augmentent la charge et fragilisent le sol"
+  ],
+  "circ": "Cercle critique : centre ({x} ; {y}) m, rayon {r} m, de x={a} à x={b} m.",
+  "dry": "sec",
+  "errLay": "Les bases des couches doivent décroître de haut en bas, et la base de la dernière couche doit être ≤ 0.",
+  "errVal": "Vérifiez les valeurs : tous les champs sont requis et dans des limites raisonnables.",
+  "fsE": "Coefficient de sécurité — sismique",
+  "fsS": "Coefficient de sécurité — statique",
+  "geoT": "Géométrie et eau",
+  "hi": "Conforme aux valeurs de référence",
+  "hudE": "Sismique",
+  "hudF": "Coefficient de sécurité",
+  "hudW": "Niveau de la nappe",
+  "iB": "Pente β (°)",
+  "iH": "Hauteur de la falaise H (m)",
+  "iKh": "Coefficient sismique horizontal kh",
+  "iQ": "Charge des bâtiments q (kPa)",
+  "iQB": "Largeur de la zone bâtie (m)",
+  "iQd": "Distance des bâtiments au bord (m)",
+  "iZw": "Nappe sous le plateau (m au-dessus du pied)",
+  "inT": "Données",
+  "insp": "Inspecter la tranche n°",
+  "inspR": "α = {a}° · W = {w} kN/m · u = {u} kPa · c′ = {c} kPa · φ′ = {p}° — flèche noire : poids W, orange : force sismique kh·W, verte : résistance à la base.",
+  "layN": [
+    "Couche 1",
+    "Couche 2",
+    "Substratum"
+  ],
+  "layNote": "Base = cote du bas de la couche par rapport au pied. La base de la dernière couche limite la profondeur des cercles.",
+  "layT": "Couches (de haut en bas)",
+  "leg": [
+    "Couche 1",
+    "Couche 2",
+    "Substratum",
+    "Nappe",
+    "Surface de glissement"
+  ],
+  "lo": "Inférieur à 1 : rupture probable",
+  "loadT": "Charges et séisme",
+  "methT": "Méthode",
+  "mid": "Marge insuffisante",
+  "no3d": "La 3D n'est pas disponible sur cet appareil ou ce réseau. La coupe 2D reste disponible dans l'outil d'ingénierie.",
+  "none": "Aucun cercle de glissement valide avec ces données.",
+  "outT": "Coupe et cercle critique",
+  "reset3": "↺ Réinitialiser",
+  "run": "Calculer",
+  "s3T": "La colline en 3D",
+  "s3note": "La scène est construite à partir des données de l'outil d'ingénierie : couches, nappe, bâtiments et cercle critique. Glissez pour pivoter, + et − pour zoomer.",
+  "sensNote": "Coefficient statique pour différents niveaux de nappe, les autres données restant fixes.",
+  "sensT": "Influence du niveau de la nappe",
+  "signs": [
+    "Nouvelles fissures dans les murs, les sols ou la chaussée, ou fissures anciennes qui s'élargissent",
+    "Portes et fenêtres qui coincent soudainement",
+    "Murs, poteaux, arbres ou clôtures qui penchent",
+    "Fuites d'eau inhabituelles ou canalisations d'eau ou d'assainissement rompues",
+    "Gonflement ou affaissement du sol, trottoirs qui se décollent des bâtiments",
+    "Craquements ou chutes de pierres et de terre depuis la falaise"
+  ],
+  "signsT": "Signes de danger",
+  "slT": "Tableau des tranches (statique)",
+  "src": "Sources : La Presse, WMC, Kapitalis, Ultra Tunisia, Jawhara FM — dernière vérification le 16 septembre 2026. Suivez les communiqués du ministère de l'Équipement et de la municipalité.",
+  "stFail": "Glissement rotationnel autour du centre du cercle critique",
+  "stIdle": "Prêt — modifiez les données ou lancez la tempête",
+  "stOk": "La pente reste stable jusqu'à une saturation quasi totale avec ces données",
+  "stPrep": "Préparation du scénario (calcul de plusieurs niveaux)…",
+  "stRain": "Fortes pluies : la nappe monte, le coefficient baisse",
+  "storm": "▶ Simuler une tempête",
+  "sub": "Deux volets : un guide pour les habitants sur les signes de danger et les bons gestes, et un outil de calcul préliminaire pour ingénieurs basé sur la méthode de Bishop simplifiée.",
+  "tab1": "Sensibilisation et sécurité",
+  "tab2": "Outil d'ingénierie",
+  "tab3": "Scène 3D",
+  "target": "Valeurs de référence courantes : 1,5 en statique long terme et 1,1 en sismique. Vérifiez la norme applicable (par ex. Eurocode 7).",
+  "tgGrid": "Centres testés",
+  "tgH": "Bâtiments",
+  "tgLb": "Étiquettes",
+  "tgSl": "Tranches",
+  "tgW": "Eau",
+  "th": [
+    "x (m)",
+    "α (°)",
+    "W (kN/m)",
+    "u (kPa)",
+    "c′",
+    "φ′"
+  ],
+  "title": "Colline de Sidi Bou Saïd — sensibilisation et analyse géotechnique préliminaire",
+  "tl": [
+    [
+      "Janvier 2026",
+      "Fortes pluies, évacuation temporaire de huit immeubles et fermeture préventive de routes"
+    ],
+    [
+      "26 janvier 2026",
+      "Décision n°11 de la Cheffe du gouvernement chargeant le ministère de l'Équipement du suivi des études et travaux"
+    ],
+    [
+      "Juin 2026",
+      "Conventions avec le Centre national de télédétection (topographie) et l'Office national des mines (cartes géologiques et géophysiques)"
+    ],
+    [
+      "8 juillet 2026",
+      "Présentation des résultats de la phase 1 (diagnostic), démarrage des travaux programmé pour août 2026"
+    ],
+    [
+      "Septembre 2026",
+      "La presse évoque des retards dans les travaux à l'approche de l'hiver"
+    ]
+  ],
+  "tlT": "Suivi officiel 2026",
+  "trainer": "Formatrice internationale & Conseillère fiscale",
+  "warnEng": "Outil d'aide préliminaire réservé aux ingénieurs. Les résultats sont indicatifs, ne constituent pas une évaluation officielle d'un bâtiment ou d'un site et ne remplacent pas l'étude géotechnique en cours. Les valeurs par défaut sont des exemples : remplacez-les par vos résultats de sondages et d'essais.",
+  "wm": "Indicatif — non certifié",
+  "zwNote": "Nappe horizontale sous le plateau, descendant linéairement jusqu'au niveau de la mer au pied. Valeur négative = sol sec."
+}

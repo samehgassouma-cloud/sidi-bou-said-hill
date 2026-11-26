@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<!-- صفحة مُولَّدة · page générée · generated page : python prototype/build_landslide.py -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>هضبة سيدي بوسعيد — التوعية والتحليل الجيوتقني الأولي</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F6F8FA;--ink:#12304A;--muted:#4F6577;--blue:#1F5FA8;--soft:#DCE8F5;--ochre:#B98A52;--line:#C9D6E2;--card:#FFF;
+--ok:#3F7A3A;--okb:#E3F0DF;--warn:#8A5E00;--warnb:#FBF0D4;--bad:#A8285F;--badb:#F8DDE8}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#0F1C27;--ink:#E6EEF5;--muted:#9FB2C2;--blue:#6FA6E6;--soft:#1A3550;--line:#2A3F52;--card:#152636;--ok:#8CCB84;--okb:#1B3320;--warn:#F0C35A;--warnb:#3A2F12;--bad:#F08AB5;--badb:#3D1A2A}}
+:root[data-theme="dark"]{--bg:#0F1C27;--ink:#E6EEF5;--muted:#9FB2C2;--blue:#6FA6E6;--soft:#1A3550;--line:#2A3F52;--card:#152636;--ok:#8CCB84;--okb:#1B3320;--warn:#F0C35A;--warnb:#3A2F12;--bad:#F08AB5;--badb:#3D1A2A}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans Arabic","Segoe UI",Tahoma,Arial,sans-serif;line-height:1.6}
+.wrap{max-width:1180px;margin:0 auto;padding:18px 16px 30px}
+header{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:flex-start}
+h1{margin:0;font-size:clamp(1.3rem,3vw,1.9rem);color:var(--blue)}
+.sub{margin:4px 0 0;color:var(--muted);max-width:64ch}
+.seg{display:flex;border:1.5px solid var(--blue);border-radius:999px;overflow:hidden}
+.seg button{border:0;background:none;color:var(--blue);font:inherit;font-weight:500;padding:6px 13px;cursor:pointer}
+.seg button[aria-pressed="true"],.seg button[aria-selected="true"]{background:var(--blue);color:var(--bg)}
+.tabs{margin:18px 0 14px;width:max-content;max-width:100%}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;margin-bottom:14px}
+h2{font-size:1.15rem;margin:0 0 10px}
+h3{font-size:1rem;margin:14px 0 6px}
+.cols{display:grid;gap:14px}
+@media(min-width:820px){.cols{grid-template-columns:1fr 1fr}}
+ul.clean{margin:0;padding-inline-start:1.2em}
+ul.clean li{margin:4px 0}
+.call{display:flex;flex-wrap:wrap;gap:12px;align-items:center;background:var(--badb);color:var(--bad);border-radius:12px;padding:14px 16px;margin-bottom:14px}
+.call strong{font-size:2rem;line-height:1;direction:ltr}
+.tl{list-style:none;margin:0;padding:0}
+.tl li{border-inline-start:3px solid var(--ochre);padding:2px 12px 8px;margin-inline-start:4px}
+.tl b{display:block;color:var(--blue)}
+.small{font-size:.86rem;color:var(--muted)}
+.banner{background:var(--warnb);color:var(--warn);border-radius:12px;padding:12px 16px;margin-bottom:14px;font-weight:500}
+.eng{display:grid;gap:14px}
+@media(min-width:960px){.eng{grid-template-columns:360px 1fr}}
+.f{display:grid;grid-template-columns:1fr 92px;gap:6px 10px;align-items:center;font-size:.92rem}
+input[type=number]{width:100%;font:inherit;padding:5px 7px;border:1px solid var(--line);border-radius:7px;background:var(--bg);color:var(--ink);direction:ltr}
+.tbl{width:100%;border-collapse:collapse;font-size:.88rem}
+.tbl th,.tbl td{padding:4px;text-align:center;border-bottom:1px solid var(--line)}
+.tbl input{min-width:56px}
+.scroll{overflow-x:auto}
+.go{width:100%;margin-top:12px;padding:11px;border:0;border-radius:8px;background:var(--blue);color:var(--bg);font:inherit;font-weight:700;cursor:pointer}
+.go:disabled{opacity:.5}
+canvas{display:block;width:100%;background:var(--bg);border-radius:10px}
+.res{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:12px 0}
+.kpi{border-radius:10px;padding:10px 12px}
+.kpi span{display:block;font-size:.85rem}
+.kpi strong{font-size:1.9rem;direction:ltr;display:inline-block;line-height:1.2}
+.ok{background:var(--okb);color:var(--ok)}.warn{background:var(--warnb);color:var(--warn)}.bad{background:var(--badb);color:var(--bad)}
+.err{color:var(--bad);font-weight:500;min-height:1.2em}
+details summary{cursor:pointer;font-weight:500}
+button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid var(--ochre);outline-offset:2px}
+.eq{direction:ltr;text-align:center;font-weight:700;background:var(--soft);border-radius:8px;padding:8px;overflow-x:auto;white-space:nowrap}
+footer{text-align:center;color:var(--muted);font-size:.9rem;margin-top:18px}
+#v3{position:relative;border-radius:12px;overflow:hidden;background:linear-gradient(#8EC3EA,#E4F1FA 60%,#1C5A86 60%);min-height:220px;direction:ltr}
+#v3 canvas{display:block;width:100%;border-radius:0;background:none}
+#v3.nogl{min-height:260px;display:flex;align-items:center;justify-content:center}
+#v3msg{position:absolute;inset:auto 16px 16px;margin:0;background:rgba(255,255,255,.92);color:#12304A;border-radius:10px;padding:12px;font-weight:500;text-align:center}
+.hud{position:absolute;top:10px;left:10px;display:flex;gap:8px;flex-wrap:wrap;pointer-events:none}
+.hud div{background:rgba(10,22,40,.78);color:#fff;border-radius:10px;padding:6px 10px;font-size:.8rem;border:1px solid rgba(212,160,23,.6)}
+.hud span{display:block;opacity:.8}.hud b{font-size:1.35rem;direction:ltr;display:inline-block}
+.cok{color:#8CE08A}.cwarn{color:#F5C74E}.cbad{color:#FF8DB8}
+.wm{position:absolute;top:12px;right:12px;background:rgba(255,255,255,.8);color:#4F6577;font-size:.75rem;border-radius:6px;padding:2px 8px;pointer-events:none}
+.zoom{position:absolute;bottom:10px;right:10px;display:flex;flex-direction:column;gap:6px}
+.zoom button{width:38px;height:38px;border-radius:50%;border:0;background:rgba(10,22,40,.78);color:#fff;font-size:1.3rem;cursor:pointer}
+@media(max-width:600px){.wm{top:auto;bottom:12px;left:12px;right:auto}}
+.toggles{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.toggles label{display:flex;align-items:center;gap:5px;background:var(--soft);border-radius:999px;padding:4px 11px;font-size:.86rem;cursor:pointer}
+.toggles input{accent-color:var(--blue)}
+.insp{margin-top:10px}.insp label{font-weight:500;font-size:.92rem}.insp output{direction:ltr;color:var(--blue);font-weight:700}
+.insp input{width:100%;accent-color:#D4A017}
+#s3d{position:relative;border-radius:12px;overflow:hidden;background:#0A1628;min-height:160px}
+#s3d canvas{display:block;width:100%;border-radius:0}
+.busy{position:absolute;inset:0;background:rgba(10,22,40,.35);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+.st3{font-weight:500;min-height:1.4em;margin:10px 0 0}
+.row3{display:flex;gap:10px}.row3 .go{margin-top:8px}
+.go.alt{background:var(--soft);color:var(--ink);flex:0 0 38%}
+.legend{list-style:none;padding:0;margin:12px 0 0;display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.88rem}
+.legend i{display:inline-block;width:14px;height:14px;border-radius:3px;vertical-align:-2px;margin-inline-end:6px}
+[hidden]{display:none!important}
+.eng>*,.cols>*{min-width:0}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div><h1 data-i="title"></h1><p class="sub" data-i="sub"></p></div>
+  <div class="seg" role="group" aria-label="Language">
+    <button data-l="ar" aria-pressed="true">العربية</button><button data-l="fr" aria-pressed="false">Français</button><button data-l="en" aria-pressed="false">English</button>
+  </div>
+</header>
+<div class="seg tabs" role="tablist">
+  <button role="tab" id="t1" aria-selected="true" aria-controls="p1" data-i="tab1"></button>
+  <button role="tab" id="t2" aria-selected="false" aria-controls="p2" data-i="tab2"></button>
+</div>
+
+<!-- ============ AWARENESS ============ -->
+<section id="p1" role="tabpanel" aria-labelledby="t1">
+  <div class="call"><strong>198</strong><div><b data-i="callT"></b><div data-i="callD"></div></div></div>
+  <div class="cols">
+    <div class="card"><h2 data-i="signsT"></h2><ul class="clean" data-list="signs"></ul></div>
+    <div class="card"><h2 data-i="actT"></h2><ul class="clean" data-list="acts"></ul></div>
+  </div>
+  <div class="cols">
+    <div class="card"><h2 data-i="causeT"></h2><ul class="clean" data-list="causes"></ul></div>
+    <div class="card"><h2 data-i="tlT"></h2><ul class="tl" data-tl="tl"></ul><p class="small" data-i="src"></p></div>
+  </div>
+</section>
+
+<!-- ============ ENGINEERING ============ -->
+<section id="p2" role="tabpanel" aria-labelledby="t2" hidden>
+  <div class="banner" data-i="warnEng"></div>
+  <div class="eng">
+    <div class="card">
+      <h2 data-i="inT"></h2>
+      <h3 data-i="geoT"></h3>
+      <div class="f">
+        <label for="H" data-i="iH"></label><input type="number" id="H" value="30" min="3" max="150" step="1">
+        <label for="beta" data-i="iB"></label><input type="number" id="beta" value="30" min="10" max="75" step="1">
+        <label for="zw" data-i="iZw"></label><input type="number" id="zw" value="15" step="0.5">
+      </div>
+      <p class="small" data-i="zwNote"></p>
+      <h3 data-i="layT"></h3>
+      <div class="scroll"><table class="tbl">
+        <thead><tr><th></th><th data-i="cBot"></th><th>γ<br>kN/m³</th><th>c′<br>kPa</th><th>φ′<br>°</th></tr></thead>
+        <tbody id="lay"></tbody>
+      </table></div>
+      <p class="small" data-i="layNote"></p>
+      <h3 data-i="loadT"></h3>
+      <div class="f">
+        <label for="q" data-i="iQ"></label><input type="number" id="q" value="50" min="0" step="5">
+        <label for="qd" data-i="iQd"></label><input type="number" id="qd" value="3" min="0" step="0.5">
+        <label for="qB" data-i="iQB"></label><input type="number" id="qB" value="12" min="0" step="0.5">
+        <label for="kh" data-i="iKh"></label><input type="number" id="kh" value="0.10" min="0" max="0.5" step="0.01">
+      </div>
+      <div class="err" id="err" role="alert"></div>
+      <button class="go" id="run" data-i="run"></button>
+    </div>
+
+    <div>
+      <div class="card">
+        <h2 data-i="outT"></h2>
+        <div id="v3" role="img" aria-label="3D slope model with critical slip circle">
+          <div class="hud">
+            <div><span data-i="fsS"></span><b id="h3f">—</b></div>
+            <div><span data-i="hudE"></span><b id="h3e">—</b></div>
+            <div><span data-i="hudW"></span><b id="h3w">—</b></div>
+          </div>
+          <div class="wm" data-i="wm"></div>
+          <div class="zoom"><button id="zin" aria-label="Zoom in">+</button><button id="zout" aria-label="Zoom out">−</button></div>
+          <div class="busy" id="busy" hidden></div>
+          <p id="v3msg" hidden></p>
+        </div>
+        <canvas id="cv" hidden role="img" aria-label="Slope section with critical slip circle"></canvas>
+        <div class="toggles" id="tgl">
+          <label><input type="checkbox" data-g="grid" checked><span data-i="tgGrid"></span></label>
+          <label><input type="checkbox" data-g="slices" checked><span data-i="tgSl"></span></label>
+          <label><input type="checkbox" data-g="water" checked><span data-i="tgW"></span></label>
+          <label><input type="checkbox" data-g="houses" checked><span data-i="tgH"></span></label>
+          <label><input type="checkbox" data-g="labels" checked><span data-i="tgLb"></span></label>
+        </div>
+        <div class="insp">
+          <label for="slc"><span data-i="insp"></span> <output id="slcN">15</output></label>
+          <input type="range" id="slc" min="1" max="30" value="15">
+          <p class="small" id="slcR"></p>
+        </div>
+        <p class="st3" id="h3s" aria-live="polite"></p>
+        <div class="row3"><button class="go" id="storm" data-i="storm"></button><button class="go alt" id="reset3" data-i="reset3"></button></div>
+        <ul class="legend" id="leg3"></ul>
+        <div class="res">
+          <div class="kpi" id="k1"><span data-i="fsS"></span><strong id="v1">—</strong><span id="s1"></span></div>
+          <div class="kpi" id="k2"><span data-i="fsE"></span><strong id="v2">—</strong><span id="s2"></span></div>
+        </div>
+        <p class="small" id="circ"></p>
+        <p class="small" data-i="target"></p>
+      </div>
+      <div class="card">
+        <h2 data-i="sensT"></h2>
+        <div id="s3d" role="img" aria-label="3D bar chart of factor of safety versus water level"></div>
+        <canvas id="cv2" hidden role="img" aria-label="Factor of safety versus water level"></canvas>
+        <p class="small" data-i="sensNote"></p>
+      </div>
+      <div class="card">
+        <details><summary data-i="slT"></summary>
+          <div class="scroll"><table class="tbl" id="slices"></table></div>
+        </details>
+        <h3 data-i="methT"></h3>
+        <div class="eq">F = Σ [ (c′·b + (W − u·b)·tanφ′) / mα ] ÷ Σ [ W·sinα + kh·W·(yc − yg)/R ]</div>
+        <div class="eq" style="margin-top:6px">mα = cosα + sinα·tanφ′ / F</div>
+        <ul class="clean small" data-list="assume" style="margin-top:8px"></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>سماح قسومة — مدرّبة دولية · مستشارة جبائية<span id="ftr"></span></footer>
+</div>
+<script>
+const DATA = {"i18n": {"ar": {"actT": "ماذا تفعل؟", "acts": ["عند اتساع الشقوق بسرعة أو سماع أصوات: غادر المبنى فورًا وابتعد عن حافة الجرف", "اتصل بالحماية المدنية 198 وأبلغ البلدية، ولا تعد إلا بإذن السلطات", "صوّر الشقوق مع التاريخ وضع علامة عند طرفها لمتابعة اتساعها", "أبلغ عن أي تسرّب في قنوات الماء أو التطهير، فالماء أول عوامل الانزلاق", "لا تُضف طوابق ولا تحفر أساسات دون دراسة جيوتقنية ورخصة"], "assume": ["طريقة Bishop المبسّطة بدوائر انزلاق، 30 شريحة، بحث آلي على شبكة مراكز مع تنقيح مرتين", "ضغط الماء هيدروستاتيكي تحت خط الماء (بدون تدفّق)، والوزن الحجمي المُدخل يُطبَّق فوق الماء وتحته", "التأثير الزلزالي شبه ساكن (قوة أفقية kh·W نحو البحر)", "مقطع ثنائي الأبعاد مثالي: لا يمثّل الفوالق ولا الانزلاقات غير الدائرية ولا التعرية البحرية", "التحقق: مثال ACADS 1(a) أعطى 0.985 مقابل قيمة مرجعية ≈ 0.99"], "cBot": "القاع (م)", "calc": "جارٍ الحساب…", "calc3": "جارٍ الحساب…", "callD": "اتصل فورًا عند ظهور شقوق جديدة أو اتساعها بسرعة أو سماع أصوات تشقّق.", "callT": "الحماية المدنية", "causeT": "لماذا تنزلق الهضبة؟", "causes": ["طبيعة الصخور: طبقات طينية ورملية هشّة تكثر فيها الفوالق والكسور", "تسرّب الماء من الأمطار والقنوات يُثقل التربة ويرفع ضغط الماء فيها فيضعف احتكاكها", "التعرية البحرية تنحت قاعدة الجرف", "كثافة البناء وحفر الأساسات تزيد الحمولة وتُضعف التربة"], "circ": "الدائرة الحرجة: المركز ({x}، {y}) م، نصف القطر {r} م، من x={a} إلى x={b} م.", "dry": "جاف", "errLay": "قيعان الطبقات يجب أن تتناقص من الأعلى إلى الأسفل، وقاع الطبقة الأخيرة ≤ 0.", "errVal": "تحقّق من القيم: كل الخانات مطلوبة وضمن حدود معقولة.", "fsE": "معامل الأمان — زلزالي", "fsS": "معامل الأمان — ساكن", "geoT": "الهندسة والماء", "hi": "ضمن القيم المرجعية", "hudE": "زلزالي", "hudF": "معامل الأمان", "hudW": "منسوب الماء", "iB": "ميل المنحدر β (°)", "iH": "ارتفاع الجرف H (م)", "iKh": "المعامل الزلزالي الأفقي kh", "iQ": "حمولة المباني q (kPa)", "iQB": "عرض منطقة البناء (م)", "iQd": "بُعد المباني عن الحافة (م)", "iZw": "منسوب الماء تحت الهضبة (م فوق القاعدة)", "inT": "المعطيات", "insp": "فحص الشريحة رقم", "inspR": "α = {a}° · W = {w} kN/m · u = {u} kPa · c′ = {c} kPa · φ′ = {p}° — السهم الأسود: الوزن W، البرتقالي: القوة الزلزالية kh·W، الأخضر: المقاومة على القاعدة.", "layN": ["الطبقة 1", "الطبقة 2", "القاعدة الصلبة"], "layNote": "القاع = منسوب أسفل الطبقة بالنسبة لقاعدة الجرف. قاع الطبقة الأخيرة هو أقصى عمق لدوائر الانزلاق.", "layT": "الطبقات (من الأعلى إلى الأسفل)", "leg": ["الطبقة 1", "الطبقة 2", "القاعدة الصلبة", "خط الماء", "سطح الانزلاق"], "lo": "أقل من 1: انهيار متوقَّع", "loadT": "الحمولات والزلازل", "methT": "الطريقة", "mid": "هامش غير كافٍ", "no3d": "العرض ثلاثي الأبعاد غير متاح على هذا الجهاز أو الشبكة. المقطع ثنائي الأبعاد متاح في تبويب الأداة الهندسية.", "none": "لم تُوجد دائرة انزلاق صالحة بهذه المعطيات.", "outT": "المقطع والدائرة الحرجة", "reset3": "↺ إعادة", "run": "احسب", "s3T": "الهضبة في ثلاثة أبعاد", "s3note": "المشهد مبني من معطيات الأداة الهندسية: الطبقات، خط الماء، المباني، ودائرة الانزلاق الحرجة. اسحب للتدوير واستعمل + و − للتقريب.", "sensNote": "معامل الأمان الساكن عند مناسيب مختلفة للماء، مع بقاء بقية المعطيات ثابتة.", "sensT": "تأثير منسوب الماء", "signs": ["شقوق جديدة في الجدران أو الأرضيات أو الطريق، أو شقوق قديمة تتّسع", "أبواب ونوافذ تعلق فجأة ولا تُغلق كما كانت", "ميلان الجدران أو الأعمدة أو الأشجار أو أسوار الحدائق", "تسرّب مياه غير معتاد أو انكسار قنوات الماء أو التطهير", "انتفاخ أو هبوط في الأرض أو انفصال الأرصفة عن المباني", "أصوات تشقّق أو تساقط حجارة وأتربة من الجرف"], "signsT": "علامات الخطر", "slT": "جدول الشرائح (الحالة الساكنة)", "src": "المصادر: La Presse، WMC، Kapitalis، Ultra Tunisia، Jawhara FM — آخر مراجعة 16 سبتمبر 2026. تابع البلاغات الرسمية لوزارة التجهيز والبلدية.", "stFail": "انزلاق دوراني حول مركز الدائرة الحرجة", "stIdle": "جاهز — غيّر المعطيات أو اضغط محاكاة عاصفة", "stOk": "بقي المنحدر مستقرًا حتى تشبّع شبه كامل بهذه المعطيات", "stPrep": "تحضير السيناريو (حساب عدة مناسيب)…", "stRain": "أمطار غزيرة: منسوب الماء يرتفع ومعامل الأمان ينخفض", "storm": "▶ محاكاة عاصفة", "sub": "قسمان: دليل للسكان حول علامات الخطر وما يجب فعله، وأداة حساب أولية للمهندسين تعتمد طريقة Bishop المبسّطة.", "tab1": "التوعية والسلامة", "tab2": "الأداة الهندسية", "tab3": "المشهد ثلاثي الأبعاد", "target": "قيم مرجعية شائعة في الممارسة: 1.5 للحالة الساكنة طويلة المدى و1.1 للحالة الزلزالية. تحقّق من المعيار المعتمد (مثل Eurocode 7).", "tgGrid": "مراكز الدوائر المجرّبة", "tgH": "المباني", "tgLb": "التسميات", "tgSl": "الشرائح", "tgW": "الماء", "th": ["x (م)", "α (°)", "W (kN/م)", "u (kPa)", "c′", "φ′"], "title": "هضبة سيدي بوسعيد — التوعية والتحليل الجيوتقني الأولي", "tl": [["جانفي 2026", "أمطار غزيرة، إخلاء مؤقت لثمانية مبانٍ وغلق طرقات احتياطيًا"], ["26 جانفي 2026", "مقرر رئيسة الحكومة عدد 11 بتكليف وزارة التجهيز والإسكان بمتابعة الدراسات والأشغال"], ["جوان 2026", "اتفاقيتان مع المركز الوطني للاستشعار عن بعد (الطبوغرافيا) والديوان الوطني للمناجم (الخرائط الجيولوجية والجيوفيزيائية)"], ["8 جويلية 2026", "عرض نتائج المرحلة الأولى (التشخيص) وبرمجة انطلاق الأشغال في أوت 2026"], ["سبتمبر 2026", "تقارير صحفية تتحدّث عن تعثّر الأشغال مع اقتراب الشتاء"]], "tlT": "المسار الرسمي 2026", "trainer": "مدرّبة دولية", "warnEng": "أداة مساعدة أولية للمهندسين فقط. النتائج تقديرية ولا تُعدّ تقييمًا رسميًا لأي مبنى أو موقع، ولا تُغني عن الدراسة الجيوتقنية الميدانية الجارية. القيم الافتراضية أمثلة، استبدلها بنتائج الأسبار والتجارب المخبرية.", "wm": "تقديري — غير معتمد", "zwNote": "خط الماء أفقي تحت الهضبة وينحدر خطّيًا إلى مستوى البحر عند القاعدة. ضع قيمة سالبة لتربة جافة."}, "fr": {"actT": "Que faire ?", "acts": ["Si les fissures s'élargissent vite ou si vous entendez des craquements : quittez le bâtiment et éloignez-vous du bord", "Appelez la Protection civile au 198, prévenez la municipalité, ne revenez qu'avec l'accord des autorités", "Photographiez les fissures avec la date et marquez leurs extrémités pour suivre leur évolution", "Signalez toute fuite d'eau ou d'assainissement : l'eau est le premier facteur de glissement", "N'ajoutez pas d'étage et ne creusez pas de fondations sans étude géotechnique ni permis"], "assume": ["Méthode de Bishop simplifiée, cercles de glissement, 30 tranches, recherche automatique sur grille de centres avec deux raffinements", "Pression d'eau hydrostatique sous la nappe (sans écoulement) ; le poids volumique saisi s'applique au-dessus et en dessous", "Séisme pseudo-statique (force horizontale kh·W vers la mer)", "Coupe 2D idéalisée : ne représente ni les failles, ni les ruptures non circulaires, ni l'érosion marine", "Vérification : l'exemple ACADS 1(a) donne 0,985 pour une référence ≈ 0,99"], "cBot": "Base (m)", "calc": "Calcul en cours…", "calc3": "Calcul en cours…", "callD": "Appelez immédiatement en cas de nouvelles fissures, de fissures qui s'élargissent vite ou de craquements.", "callT": "Protection civile", "causeT": "Pourquoi la colline glisse-t-elle ?", "causes": ["Nature des roches : couches argileuses et sableuses fragiles, riches en failles et fractures", "L'eau de pluie et des réseaux alourdit le sol et augmente la pression interstitielle, ce qui réduit le frottement", "L'érosion marine sape le pied de la falaise", "La densité des constructions et les fouilles augmentent la charge et fragilisent le sol"], "circ": "Cercle critique : centre ({x} ; {y}) m, rayon {r} m, de x={a} à x={b} m.", "dry": "sec", "errLay": "Les bases des couches doivent décroître de haut en bas, et la base de la dernière couche doit être ≤ 0.", "errVal": "Vérifiez les valeurs : tous les champs sont requis et dans des limites raisonnables.", "fsE": "Coefficient de sécurité — sismique", "fsS": "Coefficient de sécurité — statique", "geoT": "Géométrie et eau", "hi": "Conforme aux valeurs de référence", "hudE": "Sismique", "hudF": "Coefficient de sécurité", "hudW": "Niveau de la nappe", "iB": "Pente β (°)", "iH": "Hauteur de la falaise H (m)", "iKh": "Coefficient sismique horizontal kh", "iQ": "Charge des bâtiments q (kPa)", "iQB": "Largeur de la zone bâtie (m)", "iQd": "Distance des bâtiments au bord (m)", "iZw": "Nappe sous le plateau (m au-dessus du pied)", "inT": "Données", "insp": "Inspecter la tranche n°", "inspR": "α = {a}° · W = {w} kN/m · u = {u} kPa · c′ = {c} kPa · φ′ = {p}° — flèche noire : poids W, orange : force sismique kh·W, verte : résistance à la base.", "layN": ["Couche 1", "Couche 2", "Substratum"], "layNote": "Base = cote du bas de la couche par rapport au pied. La base de la dernière couche limite la profondeur des cercles.", "layT": "Couches (de haut en bas)", "leg": ["Couche 1", "Couche 2", "Substratum", "Nappe", "Surface de glissement"], "lo": "Inférieur à 1 : rupture probable", "loadT": "Charges et séisme", "methT": "Méthode", "mid": "Marge insuffisante", "no3d": "La 3D n'est pas disponible sur cet appareil ou ce réseau. La coupe 2D reste disponible dans l'outil d'ingénierie.", "none": "Aucun cercle de glissement valide avec ces données.", "outT": "Coupe et cercle critique", "reset3": "↺ Réinitialiser", "run": "Calculer", "s3T": "La colline en 3D", "s3note": "La scène est construite à partir des données de l'outil d'ingénierie : couches, nappe, bâtiments et cercle critique. Glissez pour pivoter, + et − pour zoomer.", "sensNote": "Coefficient statique pour différents niveaux de nappe, les autres données restant fixes.", "sensT": "Influence du niveau de la nappe", "signs": ["Nouvelles fissures dans les murs, les sols ou la chaussée, ou fissures anciennes qui s'élargissent", "Portes et fenêtres qui coincent soudainement", "Murs, poteaux, arbres ou clôtures qui penchent", "Fuites d'eau inhabituelles ou canalisations d'eau ou d'assainissement rompues", "Gonflement ou affaissement du sol, trottoirs qui se décollent des bâtiments", "Craquements ou chutes de pierres et de terre depuis la falaise"], "signsT": "Signes de danger", "slT": "Tableau des tranches (statique)", "src": "Sources : La Presse, WMC, Kapitalis, Ultra Tunisia, Jawhara FM — dernière vérification le 16 septembre 2026. Suivez les communiqués du ministère de l'Équipement et de la municipalité.", "stFail": "Glissement rotationnel autour du centre du cercle critique", "stIdle": "Prêt — modifiez les données ou lancez la tempête", "stOk": "La pente reste stable jusqu'à une saturation quasi totale avec ces données", "stPrep": "Préparation du scénario (calcul de plusieurs niveaux)…", "stRain": "Fortes pluies : la nappe monte, le coefficient baisse", "storm": "▶ Simuler une tempête", "sub": "Deux volets : un guide pour les habitants sur les signes de danger et les bons gestes, et un outil de calcul préliminaire pour ingénieurs basé sur la méthode de Bishop simplifiée.", "tab1": "Sensibilisation et sécurité", "tab2": "Outil d'ingénierie", "tab3": "Scène 3D", "target": "Valeurs de référence courantes : 1,5 en statique long terme et 1,1 en sismique. Vérifiez la norme applicable (par ex. Eurocode 7).", "tgGrid": "Centres testés", "tgH": "Bâtiments", "tgLb": "Étiquettes", "tgSl": "Tranches", "tgW": "Eau", "th": ["x (m)", "α (°)", "W (kN/m)", "u (kPa)", "c′", "φ′"], "title": "Colline de Sidi Bou Saïd — sensibilisation et analyse géotechnique préliminaire", "tl": [["Janvier 2026", "Fortes pluies, évacuation temporaire de huit immeubles et fermeture préventive de routes"], ["26 janvier 2026", "Décision n°11 de la Cheffe du gouvernement chargeant le ministère de l'Équipement du suivi des études et travaux"], ["Juin 2026", "Conventions avec le Centre national de télédétection (topographie) et l'Office national des mines (cartes géologiques et géophysiques)"], ["8 juillet 2026", "Présentation des résultats de la phase 1 (diagnostic), démarrage des travaux programmé pour août 2026"], ["Septembre 2026", "La presse évoque des retards dans les travaux à l'approche de l'hiver"]], "tlT": "Suivi officiel 2026", "trainer": "Formatrice internationale & Conseillère fiscale", "warnEng": "Outil d'aide préliminaire réservé aux ingénieurs. Les résultats sont indicatifs, ne constituent pas une évaluation officielle d'un bâtiment ou d'un site et ne remplacent pas l'étude géotechnique en cours. Les valeurs par défaut sont des exemples : remplacez-les par vos résultats de sondages et d'essais.", "wm": "Indicatif — non certifié", "zwNote": "Nappe horizontale sous le plateau, descendant linéairement jusqu'au niveau de la mer au pied. Valeur négative = sol sec."}, "en": {"actT": "What to do", "acts": ["If cracks widen fast or you hear cracking: leave the building and move away from the edge", "Call Civil Protection on 198, notify the municipality, return only when authorities allow", "Photograph cracks with the date and mark their ends to track growth", "Report any water or sewer leak: water is the main trigger of sliding", "Do not add floors or dig foundations without a geotechnical study and a permit"], "assume": ["Simplified Bishop method, circular slip surfaces, 30 slices, automatic grid search of centres with two refinements", "Hydrostatic pore pressure below the water table (no seepage); the entered unit weight applies above and below it", "Pseudo-static earthquake (horizontal force kh·W toward the sea)", "Idealised 2D section: does not model faults, non-circular failures or sea erosion", "Check: ACADS example 1(a) gives 0.985 against a reference of ≈ 0.99"], "cBot": "Base (m)", "calc": "Calculating…", "calc3": "Calculating…", "callD": "Call immediately if new cracks appear, cracks widen quickly, or you hear cracking sounds.", "callT": "Civil Protection", "causeT": "Why does the hill slide?", "causes": ["Rock type: fragile clay and sand layers with many faults and fractures", "Rain and pipe leaks make the soil heavier and raise pore water pressure, which reduces friction", "Sea erosion undercuts the foot of the cliff", "Dense building and excavation add load and weaken the ground"], "circ": "Critical circle: centre ({x}, {y}) m, radius {r} m, from x={a} to x={b} m.", "dry": "dry", "errLay": "Layer bases must decrease from top to bottom, and the last base must be ≤ 0.", "errVal": "Check the values: all fields are required and must be within reasonable limits.", "fsE": "Factor of safety — seismic", "fsS": "Factor of safety — static", "geoT": "Geometry and water", "hi": "Within reference values", "hudE": "Seismic", "hudF": "Factor of safety", "hudW": "Water table", "iB": "Slope angle β (°)", "iH": "Cliff height H (m)", "iKh": "Horizontal seismic coefficient kh", "iQ": "Building load q (kPa)", "iQB": "Built zone width (m)", "iQd": "Building distance from edge (m)", "iZw": "Water table under the plateau (m above toe)", "inT": "Inputs", "insp": "Inspect slice no.", "inspR": "α = {a}° · W = {w} kN/m · u = {u} kPa · c′ = {c} kPa · φ′ = {p}° — black arrow: weight W, orange: seismic force kh·W, green: base resistance.", "layN": ["Layer 1", "Layer 2", "Bedrock"], "layNote": "Base = elevation of the layer bottom relative to the toe. The last layer's base limits circle depth.", "layT": "Layers (top to bottom)", "leg": ["Layer 1", "Layer 2", "Bedrock", "Water table", "Slip surface"], "lo": "Below 1: failure expected", "loadT": "Loads and earthquake", "methT": "Method", "mid": "Insufficient margin", "no3d": "3D is not available on this device or network. The 2D section is still available in the engineering tab.", "none": "No valid slip circle found with these inputs.", "outT": "Section and critical circle", "reset3": "↺ Reset", "run": "Calculate", "s3T": "The hill in 3D", "s3note": "The scene is built from the engineering tool inputs: layers, water table, buildings and the critical slip circle. Drag to rotate, use + and − to zoom.", "sensNote": "Static factor of safety at different water levels, other inputs unchanged.", "sensT": "Effect of water level", "signs": ["New cracks in walls, floors or the road, or old cracks that widen", "Doors and windows that suddenly stick", "Walls, poles, trees or fences that tilt", "Unusual water seepage or broken water or sewer pipes", "Ground bulging or sinking, pavements pulling away from buildings", "Cracking sounds or stones and soil falling from the cliff"], "signsT": "Warning signs", "slT": "Slice table (static)", "src": "Sources: La Presse, WMC, Kapitalis, Ultra Tunisia, Jawhara FM — last checked 16 September 2026. Follow official statements from the Ministry of Equipment and the municipality.", "stFail": "Rotational slide about the critical circle centre", "stIdle": "Ready — change the inputs or start the storm", "stOk": "The slope stays stable up to near-full saturation with these inputs", "stPrep": "Preparing the scenario (computing several levels)…", "stRain": "Heavy rain: the water table rises and the factor of safety drops", "storm": "▶ Simulate a storm", "sub": "Two parts: a residents' guide to warning signs and what to do, and a preliminary calculation tool for engineers using the simplified Bishop method.", "tab1": "Awareness and safety", "tab2": "Engineering tool", "tab3": "3D scene", "target": "Common reference values in practice: 1.5 for long-term static and 1.1 for seismic. Check the applicable standard (e.g. Eurocode 7).", "tgGrid": "Trial centres", "tgH": "Buildings", "tgLb": "Labels", "tgSl": "Slices", "tgW": "Water", "th": ["x (m)", "α (°)", "W (kN/m)", "u (kPa)", "c′", "φ′"], "title": "Sidi Bou Said hill — awareness and preliminary geotechnical analysis", "tl": [["January 2026", "Heavy rain, temporary evacuation of eight buildings and precautionary road closures"], ["26 January 2026", "Head of Government decision no. 11 assigns the Ministry of Equipment to oversee studies and works"], ["June 2026", "Agreements with the National Remote Sensing Centre (topography) and the National Office of Mines (geological and geophysical maps)"], ["8 July 2026", "Phase 1 (diagnosis) results presented, works scheduled to start in August 2026"], ["September 2026", "Press reports point to delays in the works as winter approaches"]], "tlT": "Official timeline 2026", "trainer": "International Trainer & Tax Advisor", "warnEng": "Preliminary aid for engineers only. Results are indicative, are not an official assessment of any building or site, and do not replace the ongoing site investigation. Default values are examples: replace them with your borehole and lab results.", "wm": "Indicative — not certified", "zwNote": "Horizontal water table under the plateau, dropping linearly to sea level at the toe. Use a negative value for dry soil."}}, "defaults": {"fields": [{"id": "H", "value": 30, "min": 3, "max": 150, "step": 1}, {"id": "beta", "value": 30, "min": 10, "max": 75, "step": 1}, {"id": "zw", "value": 15, "step": 0.5}, {"id": "q", "value": 50, "min": 0, "step": 5}, {"id": "qd", "value": 3, "min": 0, "step": 0.5}, {"id": "qB", "value": 12, "min": 0, "step": 0.5}, {"id": "kh", "value": "0.10", "min": 0, "max": 0.5, "step": 0.01}], "layers": [{"bot": 20, "g": 19, "c": 12, "phi": 28}, {"bot": 5, "g": 20, "c": 20, "phi": 24}, {"bot": -10, "g": 22, "c": 50, "phi": 34}], "slices": 30, "targets": {"static": 1.5, "seismic": 1.1}, "waterLevels": [-1, 0.2, 0.4, 0.6, 0.8, 0.95], "limits": {"g": [10, 30], "phi": [0, 50], "c": [0, 1000]}, "search": {"gridSide": 18, "seeds": 4, "refineRounds": 4, "radiiCoarse": 24, "radiiFine": 40}}};
+const T = DATA.i18n, CFG = DATA.defaults;
+const $ = id => document.getElementById(id);
+
+/* محرّك Bishop المبسّط · moteur Bishop simplifié · simplified Bishop engine — généré/lu par prototype/build_landslide.py · لا تُعدّل الصفحة المبنية مباشرة */
+function makeModel(p){
+  const tb=Math.tan(p.beta*Math.PI/180), xcr=p.H/tb;
+  const layers=p.layers; // [{bot,g,c,phi}] top->bottom
+  const zBed=layers[layers.length-1].bot;
+  const xmin=-1.5*p.H-10, xmax=xcr+2.5*p.H+10;
+  const surf=x=>x<=0?0:(x>=xcr?p.H:x*tb);
+  const zwp=Math.min(p.zw,p.H);
+  const pz=x=>zwp<=0?zwp:(x<=0?0:Math.min(surf(x),x>=xcr?zwp:zwp*x/xcr));
+  return {...p,tb,xcr,zBed,xmin,xmax,surf,pz};
+}
+function layerAt(m,y){for(const L of m.layers){if(y>=L.bot)return L;}return m.layers[m.layers.length-1];}
+function colWeight(m,ys,yb){
+  let w=0,top=Infinity;
+  for(const L of m.layers){const hi=Math.min(ys,top),lo=Math.max(yb,L.bot);if(hi>lo)w+=(hi-lo)*L.g;top=L.bot;}
+  return w;
+}
+function bishop(m,xc,yc,R,kh,keep){
+  const GW=9.81,arc=x=>{const d=R*R-(x-xc)*(x-xc);return d<0?NaN:yc-Math.sqrt(d);};
+  const a=Math.max(m.xmin,xc-R),b=Math.min(m.xmax,xc+R),N=300,dx=(b-a)/N;
+  let best=null,run=null;
+  for(let i=0;i<=N;i++){const x=a+i*dx,y=arc(x),inside=!isNaN(y)&&y<m.surf(x)-1e-6;
+    if(inside){if(!run)run={s:i,e:i};else run.e=i;}
+    if((!inside||i===N)&&run){if(!best||run.e-run.s>best.e-best.s)best=run;run=null;}}
+  if(!best)return null;
+  if((best.s===0&&a<=m.xmin)||(best.e===N&&b>=m.xmax))return null;
+  const f=x=>{const y=arc(x);return isNaN(y)?1:y-m.surf(x)};
+  const bis=(lo,hi)=>{for(let k=0;k<40;k++){const mid=(lo+hi)/2;(f(lo)>0)===(f(mid)>0)?lo=mid:hi=mid;}return (lo+hi)/2;};
+  const xl=best.s>0?bis(a+(best.s-1)*dx,a+best.s*dx):a;
+  const xr=best.e<N?bis(a+best.e*dx,a+(best.e+1)*dx):b;
+  if(xr-xl<2)return null;
+  const ylow=(xc>xl&&xc<xr)?yc-R:Math.min(arc(xl),arc(xr));
+  if(ylow<m.zBed-1e-6)return null;
+  const n=CFG.slices,bw=(xr-xl)/n,S=[];let drive=0;
+  for(let i=0;i<n;i++){
+    const xm=xl+(i+.5)*bw,yb=arc(xm),ys=m.surf(xm);if(isNaN(yb))return null;
+    const h=Math.sqrt(R*R-(xm-xc)*(xm-xc));const al=Math.atan((xm-xc)/h);
+    let W=colWeight(m,ys,yb)*bw;
+    const ov=Math.max(0,Math.min(xm+bw/2,m.xcr+m.qd+m.qB)-Math.max(xm-bw/2,m.xcr+m.qd));
+    W+=m.q*ov;
+    const u=GW*Math.max(0,m.pz(xm)-yb),L=layerAt(m,yb);
+    const yg=(ys+yb)/2;
+    drive+=W*Math.sin(al)+kh*W*(yc-yg)/R;
+    S.push({xm,yb,ys,al,W,u,c:L.c,t:Math.tan(L.phi*Math.PI/180)});
+  }
+  if(drive<=1e-6)return null;
+  let F=1.5;
+  for(let it=0;it<60;it++){
+    let num=0;
+    for(const s of S){const ma=Math.cos(s.al)+Math.sin(s.al)*s.t/F;if(ma<0.2)return null;
+      num+=(s.c*bw+Math.max(0,s.W-s.u*bw)*s.t)/ma;}
+    const Fn=num/drive;if(Math.abs(Fn-F)<1e-5){F=Fn;break;}F=Fn;
+  }
+  if(!isFinite(F)||F<=0)return null;
+  return keep?{F,xc,yc,R,xl,xr,S,bw}:{F,xc,yc,R};
+}
+function search(m,kh){
+  const H=m.H,top=H-0.5;
+  const radii=(xc,yc,nr)=>{const r=[Math.hypot(xc,yc)];
+    for(let k=0;k<nr;k++){const yt=m.zBed+(top-m.zBed)*k/(nr-1);if(yc>yt)r.push(yc-yt);}return r;};
+  const evalC=(xc,yc,nr)=>{let loc=null;for(const R of radii(xc,yc,nr)){const r=bishop(m,xc,yc,R,kh);if(r&&(!loc||r.F<loc.F))loc=r;}return loc;};
+  const X0=-0.5*H,X1=m.xcr+0.8*H,Y0=0.5*H,Y1=3.5*H,n=CFG.search.gridSide,grid=[];
+  for(let i=0;i<n;i++)for(let j=0;j<n;j++){
+    const r=evalC(X0+(X1-X0)*i/(n-1),Y0+(Y1-Y0)*j/(n-1),CFG.search.radiiCoarse);if(r)grid.push(r);}
+  if(!grid.length)return {best:null,grid};
+  const seeds=[...grid].sort((a,b)=>a.F-b.F).slice(0,CFG.search.seeds);
+  let best=seeds[0];
+  for(const sd of seeds){
+    let c={...sd},sx=(X1-X0)/(n-1),sy=(Y1-Y0)/(n-1);
+    for(let round=0;round<CFG.search.refineRounds;round++){
+      for(let i=-2;i<=2;i++)for(let j=-2;j<=2;j++){
+        const yc=c.yc+j*sy/2;if(yc<0.2*H)continue;
+        const r=evalC(c.xc+i*sx/2,yc,CFG.search.radiiFine);if(r&&r.F<c.F)c=r;}
+      // local radius polish
+      for(let d=-3;d<=3;d+=0.25){const r=bishop(m,c.xc,c.yc,c.R+d,kh);if(r&&r.F<c.F)c=r;}
+      sx/=2;sy/=2;
+    }
+    if(c.F<best.F)best=c;
+  }
+  let st=1;for(let it=0;it<60&&st>0.02;it++){let imp=false;
+    for(const [a,b2,c2] of [[st,0,0],[-st,0,0],[0,st,0],[0,-st,0],[0,0,st],[0,0,-st],[0,st,st],[0,-st,-st]]){
+      const r=bishop(m,best.xc+a,best.yc+b2,best.R+c2,kh);if(r&&r.F<best.F-1e-7){best=r;imp=true;}}
+    if(!imp)st/=2;}
+  return {best:bishop(m,best.xc,best.yc,best.R,kh,true),grid};
+}
+
+
+/* العرض ثلاثي الأبعاد (Three.js r128) · vue 3D · 3D view — généré/lu par prototype/build_landslide.py · لا تُعدّل الصفحة المبنية مباشرة */
+const V={ok:null,loading:false,r:null,scene:null,cam:null,world:null,th:-0.55,ph:1.12,rad:100,tgt:null,drag:null,
+  mode:"idle",t:0,zw:0,F:null,seq:null,rain:null,sea:null,pivot:null,wline:null,wfill:null,dust:null,built:null,last:0,status:"stIdle"};
+const COL=[0xC9A06A,0x9C7A55,0x6E5A48];
+function has3D(){try{const c=document.createElement("canvas");return !!(window.WebGLRenderingContext&&(c.getContext("webgl")||c.getContext("experimental-webgl")));}catch(e){return false}}
+function load3D(cb){
+  if(window.THREE)return cb(true);
+  let done=false;const fin=v=>{if(!done){done=true;cb(v)}};
+  const s=document.createElement("script");s.src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js";
+  s.onload=()=>fin(!!window.THREE);s.onerror=()=>fin(false);document.head.appendChild(s);setTimeout(()=>fin(!!window.THREE),9000);
+}
+function fallback3D(){V.no=true;$("v3").hidden=true;$("s3d").hidden=true;$("cv").hidden=false;$("cv2").hidden=false;
+  ["tgl"].forEach(i=>$(i).hidden=true);document.querySelector(".insp").hidden=true;$("storm").disabled=true;$("reset3").disabled=true;
+  $("h3s").textContent=T[lang].no3d;if(last)show(last);}
+function open3D(){
+  const go=()=>{ if(V.no)return; if(!has3D())return fallback3D();
+    if(V.ok){if(V.built!==last){build3D(last);buildSens(last);}return;}
+    if(V.loading)return;V.loading=true;
+    load3D(ok=>{V.loading=false;if(!ok)return fallback3D();try{init3D();initSens();build3D(last);buildSens(last);}catch(e){console.error(e);fallback3D();}});
+  };
+  if(last)go();else run(go);
+}
+function init3D(){
+  const box=$("v3");
+  V.r=new THREE.WebGLRenderer({antialias:true});V.r.setPixelRatio(Math.min(2,devicePixelRatio||1));
+  box.prepend(V.r.domElement);V.r.domElement.style.touchAction="none";
+  V.scene=new THREE.Scene();V.scene.background=new THREE.Color(0xBFDDF2);
+  V.cam=new THREE.PerspectiveCamera(42,1,0.5,3000);
+  V.scene.add(new THREE.HemisphereLight(0xEAF4FF,0x6E5A48,0.75));
+  const sun=new THREE.DirectionalLight(0xFFF3DA,0.85);sun.position.set(-60,120,90);V.scene.add(sun);
+  const el=V.r.domElement;
+  el.addEventListener("pointerdown",e=>{V.drag={x:e.clientX,y:e.clientY,th:V.th,ph:V.ph};el.setPointerCapture(e.pointerId);},{passive:true});
+  el.addEventListener("pointermove",e=>{if(!V.drag)return;V.th=V.drag.th-(e.clientX-V.drag.x)*0.006;
+    V.ph=Math.min(1.45,Math.max(0.35,V.drag.ph-(e.clientY-V.drag.y)*0.005));V.idleT=0;},{passive:true});
+  const up=()=>{V.drag=null};el.addEventListener("pointerup",up,{passive:true});el.addEventListener("pointercancel",up,{passive:true});
+  $("zin").onclick=()=>V.rad=Math.max(V.rad0*0.45,V.rad*0.85);
+  $("zout").onclick=()=>V.rad=Math.min(V.rad0*2,V.rad/0.85);
+  new ResizeObserver(size3D).observe(box);size3D();
+  V.ok=true;V.last=performance.now();requestAnimationFrame(loop3D);
+}
+function size3D(){if(!V.r)return;const w=$("v3").clientWidth,h=Math.round(w*(w<700?1.05:0.56));
+  V.r.setSize(w,h);V.cam.aspect=w/h;V.cam.updateProjectionMatrix();}
+function disposeTree(o){o.traverse(n=>{n.geometry&&n.geometry.dispose();if(n.material)[].concat(n.material).forEach(m=>m.dispose());});}
+function rng(seed){return()=>{seed=(seed*16807)%2147483647;return seed/2147483647;};}
+function makeHouse(w,h,dome,rand){
+  const g=new THREE.Group(),white=new THREE.MeshLambertMaterial({color:0xFBFCFD}),blue=new THREE.MeshLambertMaterial({color:0x1F5FA8});
+  const b=new THREE.Mesh(new THREE.BoxGeometry(w,h,w*0.9),white);b.position.y=h/2;g.add(b);
+  const d=new THREE.Mesh(new THREE.BoxGeometry(0.15,2.1,1.1),blue);d.position.set(-w/2-0.05,1.05,0);g.add(d);
+  for(const zz of [-w*0.28,w*0.28])if(h>3.5){const wi=new THREE.Mesh(new THREE.BoxGeometry(0.15,0.8,0.7),blue);wi.position.set(-w/2-0.05,h-1.3,zz);g.add(wi);}
+  if(dome){const s=new THREE.Mesh(new THREE.SphereGeometry(w*0.3,14,8,0,Math.PI*2,0,Math.PI/2),white);s.position.y=h;g.add(s);}
+  g.rotation.y=(rand()-0.5)*0.12;return g;
+}
+function shapeFrom(pts){const s=new THREE.Shape();pts.forEach((p,i)=>i?s.lineTo(p[0],p[1]):s.moveTo(p[0],p[1]));return s;}
+function extrude(pts,z0,depth,color,parent,off){
+  const geo=new THREE.ExtrudeGeometry(shapeFrom(pts),{depth,bevelEnabled:false});
+  const m=new THREE.Mesh(geo,new THREE.MeshLambertMaterial({color}));m.position.set(off?off[0]:0,off?off[1]:0,z0);parent.add(m);return m;
+}
+function build3D(o,circle){
+  const m=o.m,C=circle||(o.st.best);V.o=o;V.built=o;V.model=m;V.circle=C;V.mode="idle";V.seq=null;V.status="stIdle";
+  if(V.world){V.scene.remove(V.world);disposeTree(V.world);}
+  const W=new THREE.Group();V.world=W;V.scene.add(W);
+  const G={};["grid","slices","water","houses","labels"].forEach(k=>{G[k]=new THREE.Group();});V.G=G;
+  const x0=-0.6*m.H,x1=m.xcr+1.6*m.H,L=x1-x0,D=Math.max(30,L*0.75);
+  V.D=D;V.x0=x0;V.x1=x1;
+  const arc=C?x=>{const q=C.R*C.R-(x-C.xc)**2;return q>0?C.yc-Math.sqrt(q):Infinity}:()=>Infinity;
+  const xs=[];for(let i=0;i<=180;i++)xs.push(x0+L*i/180);
+  [0,m.xcr,...m.layers.map(Ly=>Ly.bot/m.tb-1e-4)].concat(C?[C.xl,C.xr]:[]).forEach(v=>{if(v>x0&&v<x1)xs.push(v)});xs.sort((a,b)=>a-b);
+  const slipW=C?Math.min(D*0.5,Math.max(8,(C.xr-C.xl)*0.9)):0,zf=D/2-slipW;
+  const layersFor=(top,z0,dep)=>{let prev=Infinity;m.layers.forEach((Ly,i)=>{
+      const tp=x=>Math.min(top(x),prev);let run=[];
+      const flush=()=>{if(run.length>1){const pts=run.concat([[run[run.length-1][0],Ly.bot],[run[0][0],Ly.bot]]);extrude(pts,z0,dep,COL[i],W);}run=[];};
+      xs.forEach(x=>{const y=tp(x);if(y>Ly.bot+1e-3)run.push([x,y]);else flush();});flush();
+      prev=Ly.bot;});};
+  const cutTop=x=>(C&&x>C.xl&&x<C.xr)?Math.min(m.surf(x),arc(x)):m.surf(x);
+  layersFor(m.surf,-D/2,zf+D/2);
+  if(C)layersFor(cutTop,zf,slipW);
+  // bedrock base slab
+  extrude([[x0,m.zBed],[x1,m.zBed],[x1,m.zBed-3],[x0,m.zBed-3]],-D/2,D,0x4E3F33,W);
+  // sliding mass on a pivot at the circle centre
+  V.pivot=null;
+  if(C){
+    const pv=new THREE.Group();pv.position.set(C.xc,C.yc,0);W.add(pv);V.pivot=pv;
+    const top=xs.filter(x=>x>=C.xl&&x<=C.xr).map(x=>[x,m.surf(x)]);
+    const bot=[];for(let i=40;i>=0;i--){const x=C.xl+(C.xr-C.xl)*i/40;bot.push([x,Math.min(arc(x),m.surf(x))]);}
+    const pts=[[C.xl,m.surf(C.xl)],...top,[C.xr,m.surf(C.xr)],...bot];
+    extrude(pts.map(p=>[p[0]-C.xc,p[1]-C.yc]),zf,slipW,0xD2A86F,pv);
+    // slip surface tube on the front face
+    const cp=[];for(let i=0;i<=48;i++){const x=C.xl+(C.xr-C.xl)*i/48;cp.push(new THREE.Vector3(x,Math.min(arc(x),m.surf(x)),D/2+0.12));}
+    W.add(new THREE.Mesh(new THREE.TubeGeometry(new THREE.CatmullRomCurve3(cp),96,Math.max(0.18,m.H*0.008),6,false),new THREE.MeshBasicMaterial({color:0xA8285F})));
+    const ctr=new THREE.Mesh(new THREE.SphereGeometry(Math.max(0.5,m.H*0.018),12,10),new THREE.MeshBasicMaterial({color:0xA8285F}));ctr.position.set(C.xc,C.yc,D/2);W.add(ctr);
+    const lg=new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(C.xl,m.surf(C.xl),D/2+0.1),new THREE.Vector3(C.xc,C.yc,D/2),new THREE.Vector3(C.xr,m.surf(C.xr),D/2+0.1)]);
+    const ln=new THREE.Line(lg,new THREE.LineDashedMaterial({color:0xA8285F,dashSize:1.2,gapSize:0.8}));ln.computeLineDistances();W.add(ln);
+  }
+  // houses
+  W.add(G.houses);
+  if(V.pivot){V.hp=new THREE.Group();V.hp.name="hp";V.pivot.add(V.hp);}
+  const rand=rng(7);
+  if(m.q>0&&m.qB>0){
+    const step=6.5,dens=Math.min(1,0.35+m.q/100);
+    for(let x=m.xcr+m.qd+2.5;x<=m.xcr+m.qd+m.qB-1;x+=step)
+      for(let z=-D/2+4;z<=D/2-3;z+=step){
+        if(rand()>dens)continue;
+        const w=3.6+rand()*1.6,h=3.5+rand()*4,hs=makeHouse(w,h,rand()<0.3,rand);
+        const onMass=C&&z>zf+w/2&&z<D/2-w/2&&x-w/2>C.xl&&x+w/2<C.xr;
+        if(onMass){hs.position.set(x-C.xc,m.H-C.yc,z);V.hp.add(hs);}else{hs.position.set(x,m.H,z);G.houses.add(hs);}
+      }
+  }
+  // lighthouse-like minaret landmark at the back of the plateau
+  const mn=new THREE.Mesh(new THREE.CylinderGeometry(1,1.3,12,12),new THREE.MeshLambertMaterial({color:0xFBFCFD}));
+  mn.position.set(Math.min(x1-3,m.xcr+m.qd+m.qB+8),m.H+6,-D/2+6);W.add(mn);
+  // trial centres (instanced)
+  const grid=circle?[]:o.st.grid;
+  if(grid.length){
+    const im=new THREE.InstancedMesh(new THREE.SphereGeometry(Math.max(0.3,m.H*0.011),8,6),new THREE.MeshBasicMaterial(),grid.length);
+    const mt=new THREE.Matrix4(),col=new THREE.Color();
+    grid.forEach((g,i)=>{mt.makeTranslation(g.xc,g.yc,D/2);im.setMatrixAt(i,mt);
+      col.set(g.F<1?0xA8285F:g.F<1.5?0xD09A1E:0x3F7A3A);im.setColorAt(i,col);});
+    im.instanceMatrix.needsUpdate=true;if(im.instanceColor)im.instanceColor.needsUpdate=true;G.grid.add(im);
+  }
+  W.add(G.grid);
+  // slices (move with the mass)
+  if(C&&C.S&&V.pivot){
+    const pts=[];C.S.forEach((sl,i)=>{if(i===0)return;const x=sl.xm-C.bw/2;
+      const yb=C.yc-Math.sqrt(Math.max(0,C.R*C.R-(x-C.xc)**2));pts.push(x-C.xc,yb-C.yc,D/2+0.15-0,x-C.xc,m.surf(x)-C.yc,D/2+0.15);});
+    const lg=new THREE.BufferGeometry();lg.setAttribute("position",new THREE.Float32BufferAttribute(pts,3));
+    G.slices.add(new THREE.LineSegments(lg,new THREE.LineBasicMaterial({color:0x5A3A20})));
+    V.pivot.add(G.slices);V.sel=new THREE.Group();G.slices.add(V.sel);
+  }
+  W.add(G.labels);
+  // sea
+  const sx0=x0-80,sw=-sx0+2;
+  const sg=new THREE.PlaneGeometry(sw,D+160,60,40);sg.rotateX(-Math.PI/2);
+  const sea=new THREE.Mesh(sg,new THREE.MeshLambertMaterial({color:0x1C5A86,transparent:true,opacity:0.9}));
+  sea.position.set(sx0+sw/2,0.9,0);W.add(sea);V.sea=sea;V.seaBase=Float32Array.from(sg.attributes.position.array);
+  // water table ribbon + translucent fill on the front face
+  V.wline=new THREE.Mesh(new THREE.BufferGeometry(),new THREE.MeshBasicMaterial({color:0x2E7BD0,side:THREE.DoubleSide}));
+  V.wfill=new THREE.Mesh(new THREE.BufferGeometry(),new THREE.MeshBasicMaterial({color:0x2E7BD0,transparent:true,opacity:0.28,side:THREE.DoubleSide,depthWrite:false}));
+  V.wline.position.z=D/2+0.08;V.wfill.position.z=D/2+0.05;G.water.add(V.wline,V.wfill);W.add(G.water);
+  V.xsW=xs;V.zw=m.zw;V.F=C?C.F:null;setWater(m.zw);
+  // rain
+  const N=innerWidth<700?700:1800,rp=new Float32Array(N*3);
+  for(let i=0;i<N;i++){rp[i*3]=x0-20+rand()*(L+40);rp[i*3+1]=rand()*m.H*2.5;rp[i*3+2]=-D/2+rand()*D;}
+  const rg=new THREE.BufferGeometry();rg.setAttribute("position",new THREE.BufferAttribute(rp,3));
+  V.rain=new THREE.Points(rg,new THREE.PointsMaterial({color:0x5F8FB8,size:Math.max(0.25,m.H*0.012),transparent:true,opacity:0}));W.add(V.rain);
+  // dust burst
+  const dp=new Float32Array(400*3);const dg=new THREE.BufferGeometry();dg.setAttribute("position",new THREE.BufferAttribute(dp,3));
+  V.dust=new THREE.Points(dg,new THREE.PointsMaterial({color:0xD9C3A0,size:Math.max(0.5,m.H*0.02),transparent:true,opacity:0}));V.dustV=new Float32Array(400*3);W.add(V.dust);
+  // camera
+  V.tgt=new THREE.Vector3((x0+x1)/2-L*0.08,m.H*0.35,0);V.rad0=V.rad=Math.max(L,D)*1.25*(V.cam.aspect<1?1.75:1);V.th=-0.55;V.ph=1.12;
+  labels3D();inspect();applyToggles();hud3D();
+}
+function setWater(zw){
+  const m=V.model,xs=V.xsW,t=Math.max(0.15,m.H*0.01),mm={...m,zw};
+  const pz=x=>{const z=Math.min(zw,m.H);return z<=0?z:(x<=0?0:Math.min(m.surf(x),x>=m.xcr?z:z*x/m.xcr));};
+  if(zw<=m.zBed){V.wline.visible=V.wfill.visible=false;return;}
+  V.wline.visible=V.wfill.visible=true;
+  const a=[],f=[];
+  xs.forEach(x=>{const y=pz(x);a.push(x,y-t,0,x,y+t,0);f.push(x,y,0,x,m.zBed,0);});
+  const idx=[];for(let i=0;i<xs.length-1;i++){const k=i*2;idx.push(k,k+1,k+2,k+1,k+3,k+2);}
+  [[V.wline,a],[V.wfill,f]].forEach(([mesh,arr])=>{const g=new THREE.BufferGeometry();g.setAttribute("position",new THREE.Float32BufferAttribute(arr,3));g.setIndex(idx);mesh.geometry.dispose();mesh.geometry=g;});
+}
+function hud3D(){
+  const d=T[lang];if(!$("h3w"))return;
+  $("h3w").textContent=(V.zw<=0?"—":V.zw.toFixed(1)+" m");
+  $("h3f").textContent=V.F==null?"—":V.F.toFixed(2);
+  $("h3f").className=V.F==null?"":V.F<1?"cbad":V.F<1.5?"cwarn":"cok";
+  $("h3s").textContent=d[V.status];
+  const o=V.o;$("h3e").textContent=o&&o.kh>0&&o.se.best&&V.mode==="idle"?o.se.best.F.toFixed(2):"—";
+}
+function storm(){
+  if(!V.ok||V.mode==="prep")return;
+  const base=V.built,p=base.p;
+  build3D(base);V.mode="prep";V.status="stPrep";hud3D();$("storm").disabled=true;
+  const z0=Math.max(0,p.zw),z1=p.H*0.96,n=7,seq=[];
+  let i=0;
+  const step=()=>{
+    const z=z0+(z1-z0)*i/(n-1),r=search(makeModel({...p,zw:z}),0);
+    seq.push({z,F:r.best?r.best.F:null,b:r.best});
+    const failed=r.best&&r.best.F<1;
+    if(failed||i===n-1){
+      V.seq=seq;
+      if(failed)build3D(base,r.best);
+      V.seq=seq;V.fail=failed;V.mode="rain";V.t=0;V.zw=z0;V.F=seq[0].F;V.status="stRain";hud3D();$("storm").disabled=false;
+      return;}
+    i++;setTimeout(step,0);
+  };
+  setTimeout(step,30);
+}
+function interpSeq(u){ // u in [0,1] along seq
+  const s=V.seq,k=u*(s.length-1),i=Math.min(s.length-2,Math.floor(k)),f=k-i;
+  if(s.length===1)return s[0];
+  const a=s[i],b=s[i+1];return {z:a.z+(b.z-a.z)*f,F:(a.F!=null&&b.F!=null)?a.F+(b.F-a.F)*f:(b.F??a.F)};
+}
+function loop3D(now){
+  requestAnimationFrame(loop3D);
+  const dt=Math.min(0.05,(now-V.last)/1000);V.last=now;
+  if($("p2").hidden||!V.world)return;
+  sensFrame(now);
+  V.t+=dt;const m=V.model;
+  // sea waves
+  const pa=V.sea.geometry.attributes.position;
+  for(let i=0;i<pa.count;i++){const bx=V.seaBase[i*3],bz=V.seaBase[i*3+2];pa.array[i*3+1]=Math.sin(bx*0.08+now*0.0012)*0.25+Math.cos(bz*0.06+now*0.0009)*0.2;}
+  pa.needsUpdate=true;
+  // storm phases
+  const RAIN=6.5;
+  if(V.mode==="rain"){
+    const u=Math.min(1,V.t/RAIN),v=interpSeq(u);V.zw=v.z;V.F=v.F;setWater(v.z);
+    V.rain.material.opacity=Math.min(0.8,V.t*0.6);
+    if(u>=1){ if(V.fail){V.mode="slide";V.t=0;V.status="stFail";burst();}else{V.mode="done";V.status="stOk";} }
+    hud3D();
+  }else if(V.mode==="slide"){
+    const u=Math.min(1,V.t/3.2),e=u*u*(3-2*u);
+    if(V.pivot){V.pivot.rotation.z=-0.55*e;V.pivot.position.y=V.circle.yc-m.H*0.25*e*e;V.pivot.position.x=V.circle.xc-m.H*0.15*e;}
+    if(u>=1){V.mode="done";}
+  }else if(V.mode==="done"){V.rain.material.opacity=Math.max(0,V.rain.material.opacity-dt*0.2);}
+  // rain motion
+  if(V.rain.material.opacity>0){const rp=V.rain.geometry.attributes.position;
+    for(let i=0;i<rp.count;i++){rp.array[i*3+1]-=dt*m.H*1.6;if(rp.array[i*3+1]<0)rp.array[i*3+1]+=m.H*2.5;}rp.needsUpdate=true;}
+  // dust
+  if(V.dust.material.opacity>0){const dp=V.dust.geometry.attributes.position;
+    for(let i=0;i<dp.count;i++){V.dustV[i*3+1]-=dt*9;for(let k=0;k<3;k++)dp.array[i*3+k]+=V.dustV[i*3+k]*dt;}
+    dp.needsUpdate=true;V.dust.material.opacity=Math.max(0,V.dust.material.opacity-dt*0.25);}
+  // camera: gentle idle sway
+  const th=V.th+(V.drag?0:Math.sin(now*0.00018)*0.12);
+  V.cam.position.set(V.tgt.x+V.rad*Math.sin(V.ph)*Math.sin(th),V.tgt.y+V.rad*Math.cos(V.ph),V.tgt.z+V.rad*Math.sin(V.ph)*Math.cos(th));
+  V.cam.lookAt(V.tgt);
+  V.r.render(V.scene,V.cam);
+}
+function burst(){
+  const C=V.circle,m=V.model,dp=V.dust.geometry.attributes.position,D=V.D;
+  for(let i=0;i<dp.count;i++){const lft=Math.random()<0.6,x=lft?C.xl:C.xr;
+    dp.array[i*3]=x+(Math.random()-.5)*3;dp.array[i*3+1]=m.surf(x)+Math.random()*2;dp.array[i*3+2]=D/2-Math.random()*Math.min(D*0.5,(C.xr-C.xl)*0.9);
+    V.dustV[i*3]=(Math.random()-.8)*10;V.dustV[i*3+1]=4+Math.random()*10;V.dustV[i*3+2]=(Math.random()-.5)*6;}
+  dp.needsUpdate=true;V.dust.material.opacity=0.85;
+}
+function reset3D(){if(V.ok&&(last||V.built)){build3D(last||V.built);}}
+function applyToggles(){if(!V.G)return;document.querySelectorAll("#tgl input").forEach(c=>{const g=V.G[c.dataset.g];if(g)g.visible=c.checked;if(c.dataset.g==="houses"&&V.hp)V.hp.visible=c.checked;});}
+document.querySelectorAll("#tgl input").forEach(c=>c.addEventListener("change",applyToggles));
+function makeLabel(text,opt){
+  opt=opt||{};const fs=48,pad=18,cv=document.createElement("canvas"),cx=cv.getContext("2d");
+  const font=`700 ${fs}px "IBM Plex Sans Arabic","Segoe UI",Tahoma,Arial,sans-serif`;cx.font=font;
+  const w=Math.ceil(cx.measureText(text).width)+pad*2,h=fs+pad*1.4;cv.width=w;cv.height=h;
+  cx.font=font;cx.fillStyle=opt.bg||"rgba(10,22,40,.82)";
+  const r=16;cx.beginPath();cx.moveTo(r,0);cx.arcTo(w,0,w,h,r);cx.arcTo(w,h,0,h,r);cx.arcTo(0,h,0,0,r);cx.arcTo(0,0,w,0,r);cx.fill();
+  cx.fillStyle=opt.color||"#FFFFFF";cx.textBaseline="middle";cx.textAlign="center";
+  cx.direction=/[\u0600-\u06FF]/.test(text)?"rtl":"ltr";cx.fillText(text,w/2,h/2+2);
+  const tx=new THREE.CanvasTexture(cv);tx.minFilter=THREE.LinearFilter;
+  const sp=new THREE.Sprite(new THREE.SpriteMaterial({map:tx,depthTest:false,transparent:true}));
+  const k=(opt.size||V.model.H*0.055)/h;sp.scale.set(w*k,h*k,1);sp.renderOrder=10;return sp;
+}
+function labels3D(){
+  if(!V.G)return;const G=V.G.labels,m=V.model,C=V.circle,D=V.D,d=T[lang];
+  while(G.children.length){const c=G.children.pop();c.material.map.dispose();c.material.dispose();}
+  const add=(t,x,y,z,o)=>{const s=makeLabel(t,o);s.position.set(x,y,z);G.add(s);};
+  let top=m.H;m.layers.forEach((Ly,i)=>{const mid=(Math.min(top,m.H)+Ly.bot)/2;
+    add(`${d.layN[i]} · c′=${Ly.c} · φ′=${Ly.phi}°`,V.x1-m.H*0.55,mid,D/2+0.5,{size:m.H*0.16,bg:"rgba(255,255,255,.85)",color:"#12304A"});top=Ly.bot;});
+  add(`H = ${m.H} m`,m.xcr+1,m.H*0.5,D/2+1,{size:m.H*0.1});
+  add(`β = ${m.beta}°`,m.H*0.35,m.H*0.06,D/2+1.5,{size:m.H*0.1});
+  if(m.q>0)add(`q = ${m.q} kPa`,m.xcr+m.qd+m.qB/2,m.H+m.H*0.35,D/2-2,{size:m.H*0.11,color:"#F5C74E"});
+  if(C)add(`F = ${C.F.toFixed(2)}`,C.xc,C.yc+m.H*0.12,D/2,{size:m.H*0.14,color:C.F<1?"#FF8DB8":C.F<1.5?"#F5C74E":"#8CE08A"});
+  if(m.zw>0)add(lang==="ar"?`${d.hudW} ${m.zw} م`:`${d.hudW} ${m.zw} m`,V.x1-m.H*0.1,Math.min(m.zw,m.H)+m.H*0.06,D/2+0.5,{size:m.H*0.14,color:"#9CCBFF"});
+}
+function inspect(){
+  const n=+$("slc").value;$("slcN").textContent=n;
+  const C=V.circle,d=T[lang];
+  if(!V.sel||!C||!C.S){$("slcR").textContent="";return;}
+  while(V.sel.children.length){const c=V.sel.children.pop();disposeTree(c);}
+  const sl=C.S[n-1],m=V.model,D=V.D,x0=sl.xm-C.bw/2,x1=sl.xm+C.bw/2;
+  const arc=x=>C.yc-Math.sqrt(Math.max(0,C.R*C.R-(x-C.xc)**2));
+  const pts=[[x0,m.surf(x0)],[x1,m.surf(x1)],[x1,arc(x1)],[x0,arc(x0)]].map(p=>[p[0]-C.xc,p[1]-C.yc]);
+  const geo=new THREE.ExtrudeGeometry(shapeFrom(pts),{depth:1.2,bevelEnabled:false});
+  const mesh=new THREE.Mesh(geo,new THREE.MeshLambertMaterial({color:0xD4A017,emissive:0x3A2A00}));mesh.position.z=D/2-0.2;V.sel.add(mesh);
+  const cx=sl.xm-C.xc,cy=(sl.ys+sl.yb)/2-C.yc,z=D/2+1.2,Lm=m.H*0.35,wMax=Math.max(...C.S.map(s=>s.W));
+  const L=v=>Math.max(m.H*0.08,Lm*v/wMax);
+  const arr=(dir,len,col,ox,oy)=>{const a=new THREE.ArrowHelper(dir.normalize(),new THREE.Vector3(ox,oy,z),len,col,len*0.25,len*0.15);V.sel.add(a);};
+  arr(new THREE.Vector3(0,-1,0),L(sl.W),0x12304A,cx,cy);
+  const kh=V.o.kh||0;if(kh>0)arr(new THREE.Vector3(-1,0,0),L(sl.W*kh)*1.5,0xE08A00,cx,cy);
+  const by=sl.yb-C.yc,al=sl.al;
+  arr(new THREE.Vector3(Math.cos(al),Math.sin(al),0),m.H*0.12,0x3F7A3A,cx,by);
+  $("slcR").textContent=d.inspR.replace("{a}",(al*180/Math.PI).toFixed(1)).replace("{w}",sl.W.toFixed(0)).replace("{u}",sl.u.toFixed(1)).replace("{c}",sl.c).replace("{p}",(Math.atan(sl.t)*180/Math.PI).toFixed(0));
+}
+$("slc").addEventListener("input",inspect);
+/* ---- 3D sensitivity bars ---- */
+const SV={};
+function initSens(){
+  const box=$("s3d");SV.r=new THREE.WebGLRenderer({antialias:true});SV.r.setPixelRatio(Math.min(2,devicePixelRatio||1));box.appendChild(SV.r.domElement);
+  SV.scene=new THREE.Scene();SV.scene.background=new THREE.Color(0x0A1628);
+  SV.cam=new THREE.PerspectiveCamera(38,2,0.1,200);
+  SV.scene.add(new THREE.HemisphereLight(0xffffff,0x223344,0.9));const dl=new THREE.DirectionalLight(0xffffff,0.6);dl.position.set(5,10,8);SV.scene.add(dl);
+  new ResizeObserver(()=>{const w=box.clientWidth,h=Math.round(w*(w<500?0.7:0.42));SV.r.setSize(w,h);SV.cam.aspect=w/h;SV.cam.updateProjectionMatrix();}).observe(box);
+}
+function buildSens(o){
+  if(!SV.r)return;if(SV.g){SV.scene.remove(SV.g);SV.g.traverse(n=>{n.geometry&&n.geometry.dispose();if(n.material){n.material.map&&n.material.map.dispose();n.material.dispose();}});}
+  const g=new THREE.Group();SV.g=g;SV.scene.add(g);const S=o.sens,n=S.length,sp=2.2,maxF=Math.max(2,...S.map(s=>s.F||0)),k=6/maxF;
+  const lab=(t,x,y,z,col,size)=>{const s=makeLabelS(t,col,size);s.position.set(x,y,z);g.add(s);};
+  S.forEach((s,i)=>{const x=(i-(n-1)/2)*sp;if(s.F==null)return;const h=Math.max(0.05,s.F*k);
+    const b=new THREE.Mesh(new THREE.BoxGeometry(1.3,h,1.3),new THREE.MeshLambertMaterial({color:s.F<1?0xA8285F:s.F<CFG.targets.static?0xD4A017:0x3F9A5A}));
+    b.position.set(x,h/2,0);b.userData.h=h;g.add(b);
+    lab(s.F.toFixed(2),x,h+0.6,0,"#FFFFFF",0.8);
+    lab(s.z<0?T[lang].dry:"zw="+s.z,x,-0.6,1.1,"#C9D6E2",0.7);});
+  [[1,0xFF6FA8],[CFG.targets.static,0x7FE0A0]].forEach(([f,c])=>{const p=new THREE.Mesh(new THREE.PlaneGeometry(n*sp+1,2.6),new THREE.MeshBasicMaterial({color:c,transparent:true,opacity:.16,side:THREE.DoubleSide,depthWrite:false}));
+    p.rotation.x=-Math.PI/2;p.position.y=f*k;g.add(p);lab("F = "+f,-(n*sp)/2-0.6,f*k,0,"#"+c.toString(16),0.7);});
+  const base=new THREE.Mesh(new THREE.BoxGeometry(n*sp+1,0.12,2.8),new THREE.MeshLambertMaterial({color:0x1A3550}));base.position.y=-0.06;g.add(base);
+  SV.t0=performance.now();
+}
+function makeLabelS(t,col,size){const s=makeLabel(t,{bg:"rgba(0,0,0,0)",color:col,size:1});s.scale.multiplyScalar(size);return s;}
+function sensFrame(now){
+  if(!SV.r||!SV.g)return;const a=Math.sin(now*0.0003)*0.35;
+  SV.cam.position.set(Math.sin(a)*14,5.5,Math.cos(a)*14);SV.cam.lookAt(0,2.6,0);
+  const u=Math.min(1,(now-SV.t0)/900);SV.g.children.forEach(c=>{if(c.userData.h){c.scale.y=u;c.position.y=c.userData.h*u/2;}});
+  SV.r.render(SV.scene,SV.cam);
+}
+
+
+/* الواجهة والتحكّم · interface et contrôles · UI and controls — généré/lu par prototype/build_landslide.py · لا تُعدّل الصفحة المبنية مباشرة */
+let lang="ar",last=null;
+const LD=CFG.layers.map(L=>[L.bot,L.g,L.c,L.phi]);
+$("lay").innerHTML=LD.map((r,i)=>`<tr><th class="ln"></th>${r.map((v,k)=>`<td><input type="number" id="L${i}${k}" value="${v}" step="${k===0?0.5:1}" aria-label="L${i+1}-${k}"></td>`).join("")}</tr>`).join("");
+function applyLang(l){
+  lang=l;const d=T[l];document.documentElement.lang=l;document.documentElement.dir=l==="ar"?"rtl":"ltr";document.title=d.title;
+  document.querySelectorAll("[data-i]").forEach(e=>e.textContent=d[e.dataset.i]);
+  document.querySelectorAll("[data-list]").forEach(e=>e.innerHTML=d[e.dataset.list].map(x=>`<li>${x}</li>`).join(""));
+  document.querySelectorAll("[data-tl]").forEach(e=>e.innerHTML=d.tl.map(x=>`<li><b>${x[0]}</b>${x[1]}</li>`).join(""));
+  document.querySelectorAll(".ln").forEach((e,i)=>e.textContent=d.layN[i]);
+  document.querySelectorAll("[data-l]").forEach(b=>b.setAttribute("aria-pressed",b.dataset.l===l));
+  $("ftr").textContent=l==="ar"?"":" · Sameh Gassouma — "+d.trainer;
+  if(last)show(last);
+  const L3=T[l].leg,cc=["#C9A06A","#9C7A55","#6E5A48","#2E7BD0","#A8285F"];
+  $("leg3").innerHTML=L3.map((t,i)=>`<li><i style="background:${cc[i]}"></i>${t}</li>`).join("");
+  if(typeof V!=="undefined"){hud3D();if(V.no)$("h3s").textContent=T[l].no3d;if(V.ok){labels3D();inspect();if(last)buildSens(last);}}
+}
+document.querySelectorAll("[data-l]").forEach(b=>b.onclick=()=>applyLang(b.dataset.l));
+document.querySelectorAll("[role=tab]").forEach(t=>t.onclick=()=>{
+  document.querySelectorAll("[role=tab]").forEach(x=>{const on=x===t;x.setAttribute("aria-selected",on);$(x.getAttribute("aria-controls")).hidden=!on;});
+  if(t.id==="t2")requestAnimationFrame(open3D);
+});
+const num=id=>{const v=parseFloat($(id).value);return isFinite(v)?v:NaN};
+function read(){
+  const p={H:num("H"),beta:num("beta"),zw:num("zw"),q:num("q"),qd:num("qd"),qB:num("qB"),kh:num("kh"),
+    layers:[0,1,2].map(i=>({bot:num(`L${i}0`),g:num(`L${i}1`),c:num(`L${i}2`),phi:num(`L${i}3`)}))};
+  const vals=[p.H,p.beta,p.zw,p.q,p.qd,p.qB,p.kh,...p.layers.flatMap(L=>[L.bot,L.g,L.c,L.phi])];
+  if(vals.some(isNaN)||p.H<3||p.H>150||p.beta<10||p.beta>75||p.kh<0||p.kh>0.5||p.q<0||p.qd<0||p.qB<0||
+     p.layers.some(L=>L.g<CFG.limits.g[0]||L.g>CFG.limits.g[1]||L.c<CFG.limits.c[0]||L.phi<CFG.limits.phi[0]||L.phi>CFG.limits.phi[1]))return {e:"errVal"};
+  const b=p.layers.map(L=>L.bot);
+  if(!(b[0]>b[1]&&b[1]>b[2]&&b[2]<=0))return {e:"errLay"};
+  return {p};
+}
+function computeAll(p){
+  const m=makeModel(p);
+  const st=search(m,0),se=p.kh>0?search(m,p.kh):st;
+  const levels=CFG.waterLevels.map(f=>f<0?-1:Math.round(f*p.H*10)/10);
+  const sens=levels.map(z=>{const b=search(makeModel({...p,zw:z}),0).best;return {z,F:b?b.F:null}});
+  return {m,st,se,sens,kh:p.kh,p};
+}
+function run(cb){
+  const r=read();$("err").textContent=r.e?T[lang][r.e]:"";if(r.e)return;
+  $("run").disabled=true;$("run").textContent=T[lang].calc;$("busy").textContent=T[lang].calc;$("busy").hidden=false;
+  setTimeout(()=>{
+    last=computeAll(r.p);show(last);
+    if(V.ok&&V.mode!=="prep"){build3D(last);buildSens(last);}
+    $("run").disabled=false;$("run").textContent=T[lang].run;$("busy").hidden=true;
+    if(typeof cb==="function")cb();
+  },30);
+}
+$("run").onclick=()=>run();
+let deb=null;document.querySelectorAll(".eng input[type=number]").forEach(i=>i.addEventListener("input",()=>{clearTimeout(deb);deb=setTimeout(()=>run(),900);}));
+function kpi(k,v,s,F,target){
+  const d=T[lang];$(v).textContent=F==null?"—":F.toFixed(2);
+  const c=F==null?"":F<1?"bad":F<target?"warn":"ok";$(k).className="kpi "+c;
+  $(s).textContent=F==null?d.none:F<1?d.lo:F<target?d.mid:d.hi;
+}
+function fit(cv,ratio){const r=cv.getBoundingClientRect(),dpr=devicePixelRatio||1;cv.width=r.width*dpr;cv.height=r.width*ratio*dpr;const c=cv.getContext("2d");c.setTransform(dpr,0,0,dpr,0,0);c.direction="ltr";cv.dir="ltr";return {c,w:r.width,h:r.width*ratio}}
+function css(v){return getComputedStyle(document.documentElement).getPropertyValue(v).trim()}
+function show(o){
+  const d=T[lang],{m,st,se}=o,B=st.best;
+  kpi("k1","v1","s1",B?B.F:null,CFG.targets.static);
+  if(o.kh>0)kpi("k2","v2","s2",se.best?se.best.F:null,CFG.targets.seismic);else{$("v2").textContent="—";$("k2").className="kpi";$("s2").textContent="kh = 0";}
+  $("circ").textContent=B?d.circ.replace("{x}",B.xc.toFixed(1)).replace("{y}",B.yc.toFixed(1)).replace("{r}",B.R.toFixed(1)).replace("{a}",B.xl.toFixed(1)).replace("{b}",B.xr.toFixed(1)):d.none;
+  if(!V.no){ $("slices").innerHTML=sliceRows(B,d); return; }
+  // section
+  const cv=$("cv");const {c,w,h}=fit(cv,0.62);
+  const x0=-0.6*m.H,x1=m.xcr+1.8*m.H,y0=m.zBed-2;let y1=m.H*1.25;
+  if(B)y1=Math.max(y1,Math.min(B.yc+2,m.H*3));
+  const k=Math.min((w-20)/(x1-x0),(h-20)/(y1-y0)),ox=10+((w-20)-(x1-x0)*k)/2,oy=h-10;
+  const X=x=>ox+(x-x0)*k,Y=y=>oy-(y-y0)*k;
+  c.clearRect(0,0,w,h);
+  const cols=["#C9A06A","#9C7A55","#6E5A48"];
+  let top=null;
+  m.layers.forEach((L,i)=>{c.beginPath();
+    const tp=x=>Math.min(m.surf(x),top===null?1e9:top);
+    const xs=[];for(let x=x0;x<=x1;x+=(x1-x0)/200)xs.push(x);
+    xs.forEach((x,j)=>{const y=Math.max(tp(x),L.bot);j?c.lineTo(X(x),Y(y)):c.moveTo(X(x),Y(y));});
+    c.lineTo(X(x1),Y(L.bot));c.lineTo(X(x0),Y(L.bot));c.closePath();c.fillStyle=cols[i];c.fill();top=L.bot;});
+  c.fillStyle="rgba(28,90,134,.55)";c.fillRect(X(x0),Y(0),X(0)-X(x0),Y(y0)-Y(0));
+  // water line
+  if(m.zw>y0){c.setLineDash([6,5]);c.strokeStyle="#2E7BD0";c.lineWidth=2;c.beginPath();
+    for(let x=x0,j=0;x<=x1;x+=(x1-x0)/200,j++){const y=m.pz(x);j?c.lineTo(X(x),Y(y)):c.moveTo(X(x),Y(y));}c.stroke();c.setLineDash([]);}
+  // surcharge
+  if(m.q>0&&m.qB>0){const a=X(m.xcr+m.qd),b=X(m.xcr+m.qd+m.qB),hh=Math.min(40,8+m.q/4);
+    c.fillStyle="#F4F6F8";c.strokeStyle="#1F5FA8";c.lineWidth=1.5;c.fillRect(a,Y(m.H)-hh,b-a,hh);c.strokeRect(a,Y(m.H)-hh,b-a,hh);}
+  // grid
+  st.grid.forEach(g=>{c.fillStyle=g.F<1?"#A8285F":g.F<CFG.targets.static?"#D09A1E":"#3F7A3A";c.globalAlpha=.55;c.beginPath();c.arc(X(g.xc),Y(g.yc),2.2,0,7);c.fill();});
+  c.globalAlpha=1;
+  if(B){
+    c.fillStyle="rgba(168,40,95,.18)";c.beginPath();
+    B.S.forEach((s,i)=>{i?c.lineTo(X(s.xm),Y(s.yb)):c.moveTo(X(s.xm),Y(s.yb))});
+    for(let i=B.S.length-1;i>=0;i--)c.lineTo(X(B.S[i].xm),Y(B.S[i].ys));c.fill();
+    c.strokeStyle="rgba(168,40,95,.35)";c.lineWidth=1;
+    B.S.forEach((s,i)=>{if(i%3===0){c.beginPath();c.moveTo(X(s.xm-B.bw/2),Y(s.yb));c.lineTo(X(s.xm-B.bw/2),Y(s.ys));c.stroke();}});
+    c.strokeStyle="#A8285F";c.lineWidth=2.5;c.beginPath();
+    const a0=Math.atan2(-(Math.sqrt(Math.max(0,B.R*B.R-(B.xl-B.xc)**2))),B.xl-B.xc),a1=Math.atan2(-(Math.sqrt(Math.max(0,B.R*B.R-(B.xr-B.xc)**2))),B.xr-B.xc);
+    for(let i=0;i<=60;i++){const t=a0+(a1-a0)*i/60,x=B.xc+B.R*Math.cos(t),y=B.yc+B.R*Math.sin(t);i?c.lineTo(X(x),Y(y)):c.moveTo(X(x),Y(y));}
+    c.stroke();
+    c.setLineDash([3,4]);c.lineWidth=1;c.beginPath();c.moveTo(X(B.xc),Y(B.yc));c.lineTo(X(B.xl),Y(m.surf(B.xl)));c.moveTo(X(B.xc),Y(B.yc));c.lineTo(X(B.xr),Y(m.surf(B.xr)));c.stroke();c.setLineDash([]);
+    c.fillStyle="#A8285F";c.beginPath();c.arc(X(B.xc),Y(B.yc),4,0,7);c.fill();
+    c.font="bold 14px sans-serif";c.fillText("F = "+B.F.toFixed(2),X(B.xc)+8,Y(B.yc)-6);
+  }
+  c.save();c.font="bold 13px sans-serif";c.fillStyle=css("--muted");c.textAlign="right";
+  c.fillText({ar:"تقديري — غير معتمد",fr:"Indicatif — non certifié",en:"Indicative — not certified"}[lang],w-12,20);c.restore();
+  // sensitivity
+  const {c:c2,w:w2,h:h2}=fit($("cv2"),innerWidth<700?0.6:0.34),S=o.sens,maxF=Math.max(2,...S.map(s=>s.F||0));
+  c2.clearRect(0,0,w2,h2);const bw=(w2-40)/S.length,base=h2-28;
+  const yF=f=>base-(f/maxF)*(base-14);
+  c2.strokeStyle=css("--muted");c2.setLineDash([4,4]);
+  [[1,"#A8285F"],[CFG.targets.static,"#3F7A3A"]].forEach(([f,col])=>{c2.strokeStyle=col;c2.beginPath();c2.moveTo(30,yF(f));c2.lineTo(w2-6,yF(f));c2.stroke();c2.fillStyle=col;c2.font="11px sans-serif";c2.fillText(f.toFixed(1),2,yF(f)+4);});
+  c2.setLineDash([]);
+  S.forEach((s,i)=>{const x=34+i*bw;if(s.F!=null){c2.fillStyle=s.F<1?"#A8285F":s.F<CFG.targets.static?"#D09A1E":"#3F7A3A";c2.fillRect(x+bw*.2,yF(s.F),bw*.6,base-yF(s.F));
+    c2.fillStyle=css("--ink");c2.font="bold 12px sans-serif";c2.textAlign="center";c2.fillText(s.F.toFixed(2),x+bw/2,yF(s.F)-4);}
+    c2.fillStyle=css("--muted");c2.font="11px sans-serif";c2.textAlign="center";c2.fillText(s.z<0?({ar:"جاف",fr:"sec",en:"dry"})[lang]:"zw="+s.z,x+bw/2,h2-10);c2.textAlign="start";});
+  $("slices").innerHTML=sliceRows(B,d);
+}
+function sliceRows(B,d){return B?`<tr>${d.th.map(t=>`<th>${t}</th>`).join("")}</tr>`+B.S.map(s=>`<tr><td>${s.xm.toFixed(1)}</td><td>${(s.al*180/Math.PI).toFixed(1)}</td><td>${s.W.toFixed(0)}</td><td>${(s.u).toFixed(1)}</td><td>${s.c}</td><td>${(Math.atan(s.t)*180/Math.PI).toFixed(0)}</td></tr>`).join(""):"";}
+addEventListener("resize",()=>{if(last&&!$("p2").hidden)show(last)});
+$("storm").onclick=()=>storm();$("reset3").onclick=()=>reset3D();
+applyLang("ar");
+
+</script>
+</body>
+</html>

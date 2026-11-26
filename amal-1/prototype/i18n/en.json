@@ -1,0 +1,140 @@
+{
+  "actT": "What to do",
+  "acts": [
+    "If cracks widen fast or you hear cracking: leave the building and move away from the edge",
+    "Call Civil Protection on 198, notify the municipality, return only when authorities allow",
+    "Photograph cracks with the date and mark their ends to track growth",
+    "Report any water or sewer leak: water is the main trigger of sliding",
+    "Do not add floors or dig foundations without a geotechnical study and a permit"
+  ],
+  "assume": [
+    "Simplified Bishop method, circular slip surfaces, 30 slices, automatic grid search of centres with two refinements",
+    "Hydrostatic pore pressure below the water table (no seepage); the entered unit weight applies above and below it",
+    "Pseudo-static earthquake (horizontal force kh·W toward the sea)",
+    "Idealised 2D section: does not model faults, non-circular failures or sea erosion",
+    "Check: ACADS example 1(a) gives 0.985 against a reference of ≈ 0.99"
+  ],
+  "cBot": "Base (m)",
+  "calc": "Calculating…",
+  "calc3": "Calculating…",
+  "callD": "Call immediately if new cracks appear, cracks widen quickly, or you hear cracking sounds.",
+  "callT": "Civil Protection",
+  "causeT": "Why does the hill slide?",
+  "causes": [
+    "Rock type: fragile clay and sand layers with many faults and fractures",
+    "Rain and pipe leaks make the soil heavier and raise pore water pressure, which reduces friction",
+    "Sea erosion undercuts the foot of the cliff",
+    "Dense building and excavation add load and weaken the ground"
+  ],
+  "circ": "Critical circle: centre ({x}, {y}) m, radius {r} m, from x={a} to x={b} m.",
+  "dry": "dry",
+  "errLay": "Layer bases must decrease from top to bottom, and the last base must be ≤ 0.",
+  "errVal": "Check the values: all fields are required and must be within reasonable limits.",
+  "fsE": "Factor of safety — seismic",
+  "fsS": "Factor of safety — static",
+  "geoT": "Geometry and water",
+  "hi": "Within reference values",
+  "hudE": "Seismic",
+  "hudF": "Factor of safety",
+  "hudW": "Water table",
+  "iB": "Slope angle β (°)",
+  "iH": "Cliff height H (m)",
+  "iKh": "Horizontal seismic coefficient kh",
+  "iQ": "Building load q (kPa)",
+  "iQB": "Built zone width (m)",
+  "iQd": "Building distance from edge (m)",
+  "iZw": "Water table under the plateau (m above toe)",
+  "inT": "Inputs",
+  "insp": "Inspect slice no.",
+  "inspR": "α = {a}° · W = {w} kN/m · u = {u} kPa · c′ = {c} kPa · φ′ = {p}° — black arrow: weight W, orange: seismic force kh·W, green: base resistance.",
+  "layN": [
+    "Layer 1",
+    "Layer 2",
+    "Bedrock"
+  ],
+  "layNote": "Base = elevation of the layer bottom relative to the toe. The last layer's base limits circle depth.",
+  "layT": "Layers (top to bottom)",
+  "leg": [
+    "Layer 1",
+    "Layer 2",
+    "Bedrock",
+    "Water table",
+    "Slip surface"
+  ],
+  "lo": "Below 1: failure expected",
+  "loadT": "Loads and earthquake",
+  "methT": "Method",
+  "mid": "Insufficient margin",
+  "no3d": "3D is not available on this device or network. The 2D section is still available in the engineering tab.",
+  "none": "No valid slip circle found with these inputs.",
+  "outT": "Section and critical circle",
+  "reset3": "↺ Reset",
+  "run": "Calculate",
+  "s3T": "The hill in 3D",
+  "s3note": "The scene is built from the engineering tool inputs: layers, water table, buildings and the critical slip circle. Drag to rotate, use + and − to zoom.",
+  "sensNote": "Static factor of safety at different water levels, other inputs unchanged.",
+  "sensT": "Effect of water level",
+  "signs": [
+    "New cracks in walls, floors or the road, or old cracks that widen",
+    "Doors and windows that suddenly stick",
+    "Walls, poles, trees or fences that tilt",
+    "Unusual water seepage or broken water or sewer pipes",
+    "Ground bulging or sinking, pavements pulling away from buildings",
+    "Cracking sounds or stones and soil falling from the cliff"
+  ],
+  "signsT": "Warning signs",
+  "slT": "Slice table (static)",
+  "src": "Sources: La Presse, WMC, Kapitalis, Ultra Tunisia, Jawhara FM — last checked 16 September 2026. Follow official statements from the Ministry of Equipment and the municipality.",
+  "stFail": "Rotational slide about the critical circle centre",
+  "stIdle": "Ready — change the inputs or start the storm",
+  "stOk": "The slope stays stable up to near-full saturation with these inputs",
+  "stPrep": "Preparing the scenario (computing several levels)…",
+  "stRain": "Heavy rain: the water table rises and the factor of safety drops",
+  "storm": "▶ Simulate a storm",
+  "sub": "Two parts: a residents' guide to warning signs and what to do, and a preliminary calculation tool for engineers using the simplified Bishop method.",
+  "tab1": "Awareness and safety",
+  "tab2": "Engineering tool",
+  "tab3": "3D scene",
+  "target": "Common reference values in practice: 1.5 for long-term static and 1.1 for seismic. Check the applicable standard (e.g. Eurocode 7).",
+  "tgGrid": "Trial centres",
+  "tgH": "Buildings",
+  "tgLb": "Labels",
+  "tgSl": "Slices",
+  "tgW": "Water",
+  "th": [
+    "x (m)",
+    "α (°)",
+    "W (kN/m)",
+    "u (kPa)",
+    "c′",
+    "φ′"
+  ],
+  "title": "Sidi Bou Said hill — awareness and preliminary geotechnical analysis",
+  "tl": [
+    [
+      "January 2026",
+      "Heavy rain, temporary evacuation of eight buildings and precautionary road closures"
+    ],
+    [
+      "26 January 2026",
+      "Head of Government decision no. 11 assigns the Ministry of Equipment to oversee studies and works"
+    ],
+    [
+      "June 2026",
+      "Agreements with the National Remote Sensing Centre (topography) and the National Office of Mines (geological and geophysical maps)"
+    ],
+    [
+      "8 July 2026",
+      "Phase 1 (diagnosis) results presented, works scheduled to start in August 2026"
+    ],
+    [
+      "September 2026",
+      "Press reports point to delays in the works as winter approaches"
+    ]
+  ],
+  "tlT": "Official timeline 2026",
+  "trainer": "International Trainer & Tax Advisor",
+  "warnEng": "Preliminary aid for engineers only. Results are indicative, are not an official assessment of any building or site, and do not replace the ongoing site investigation. Default values are examples: replace them with your borehole and lab results.",
+  "wm": "Indicative — not certified",
+  "zwNote": "Horizontal water table under the plateau, dropping linearly to sea level at the toe. Use a negative value for dry soil."
+}
