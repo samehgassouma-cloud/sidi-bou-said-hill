@@ -1,0 +1,212 @@
+[
+  {
+    "id": "doors",
+    "keywords": {
+      "ar": [
+        "أبواب",
+        "باب",
+        "الأزرق",
+        "زخرف",
+        "لون"
+      ],
+      "fr": [
+        "porte",
+        "portes",
+        "bleu",
+        "couleur",
+        "blanc"
+      ],
+      "en": [
+        "door",
+        "doors",
+        "blue",
+        "colour",
+        "color",
+        "white"
+      ]
+    },
+    "answer": {
+      "ar": "الأزرق والأبيض في سيدي بوسعيد ما جاوش صدفة: أمر صادر في 28 أوت 1915 فرض حماية القرية والتزام هذين اللونين ومنع البناء الفوضوي على الرأس، بمسعى من البارون رودولف ديرلنجي. المنازل تجمع بين العمارة العربية والأندلسية.",
+      "fr": "Le bleu et le blanc ne sont pas un hasard : un décret du 28 août 1915, obtenu grâce au baron Rodolphe d'Erlanger, protège le village, impose ces deux couleurs et interdit les constructions anarchiques sur le promontoire. Les maisons mêlent architecture arabe et andalouse.",
+      "en": "The blue and white is not a coincidence: a decree of 28 August 1915, obtained through Baron Rodolphe d'Erlanger, protects the village, imposes those two colours and bans unplanned building on the headland. The houses combine Arab and Andalusian architecture."
+    },
+    "verified": true,
+    "verify_note": "",
+    "source": "Décret du 28 août 1915 — protection du village (largement documenté)"
+  },
+  {
+    "id": "zone",
+    "keywords": {
+      "ar": [
+        "منطقة",
+        "مساحة",
+        "حدود",
+        "محمي",
+        "هكتار",
+        "عازلة"
+      ],
+      "fr": [
+        "périmètre",
+        "zone",
+        "surface",
+        "hectare",
+        "limite",
+        "tampon",
+        "protégé"
+      ],
+      "en": [
+        "perimeter",
+        "zone",
+        "area",
+        "hectare",
+        "boundary",
+        "buffer",
+        "protected"
+      ]
+    },
+    "answer": {
+      "ar": "المنطقة المُدرجة هي القلب التاريخي فقط: 76.54 هكتار، وحولها زون عازلة 84.44 هكتار — أي أصغر من تراب البلدية. المعيار الثقافي (iii). ⚠ المالوف والعيساوية والياسمين وخرجة ليلة المولد تُشكّل هوية المكان الحيّة، لكنها لم تُصنَّف فردياً ضمن هذا القرار.",
+      "fr": "Le périmètre inscrit est le seul cœur historique : 76.54 ha, entourés d'une zone tampon de 84.44 ha — plus petit que le territoire communal. Critère culturel (iii). ⚠ Malouf, Issaouia, jasmin et kharja de la nuit du Mouled font l'identité vivante du lieu mais n'ont pas été classés individuellement par cette décision.",
+      "en": "The inscribed perimeter is the historic core alone: 76.54 ha, with an 84.44 ha buffer zone — smaller than the municipal territory. Cultural criterion (iii). ⚠ Malouf, Issaouia, jasmine and the Mouled-night kharja belong to the living identity of the place but were not individually listed by this decision."
+    },
+    "verified": true,
+    "verify_note": "",
+    "source": "UNESCO — Liste du patrimoine mondial n° 1769 ; décision de la 48e session (Busan, 25 juillet 2026)"
+  },
+  {
+    "id": "unesco",
+    "keywords": {
+      "ar": [
+        "اليونسكو",
+        "تراث",
+        "تصنيف",
+        "عالمي"
+      ],
+      "fr": [
+        "unesco",
+        "patrimoine",
+        "classement",
+        "mondial"
+      ],
+      "en": [
+        "unesco",
+        "heritage",
+        "listed",
+        "world"
+      ]
+    },
+    "answer": {
+      "ar": "القرية أُدرجت على قائمة التراث العالمي لليونسكو يوم 25 جويلية 2026 خلال الدورة 48 للجنة التراث العالمي في بوسان، تحت المعيار الثقافي (iii)، بمساحة مُدرجة 76,54 هكتار ومنطقة عازلة 84,44 هكتار. بهذا أصبح لتونس 10 مواقع مُدرجة.",
+      "fr": "Le village a été inscrit sur la Liste du patrimoine mondial de l'UNESCO le 25 juillet 2026, lors de la 48e session du Comité à Busan, au titre du critère culturel (iii) : 76,54 ha inscrits et 84,44 ha de zone tampon. La Tunisie compte désormais 10 biens inscrits.",
+      "en": "The village was inscribed on the UNESCO World Heritage List on 25 July 2026, at the Committee's 48th session in Busan, under cultural criterion (iii): 76.54 ha inscribed with an 84.44 ha buffer zone. Tunisia now has 10 listed properties."
+    },
+    "verified": true,
+    "verify_note": "",
+    "source": "UNESCO — 48e session du Comité du patrimoine mondial, Busan, juillet 2026"
+  },
+  {
+    "id": "saint",
+    "keywords": {
+      "ar": [
+        "سيدي بوسعيد",
+        "الولي",
+        "الزاوية",
+        "الضريح",
+        "تسمية"
+      ],
+      "fr": [
+        "saint",
+        "zaouia",
+        "mausolée",
+        "nom",
+        "origine"
+      ],
+      "en": [
+        "saint",
+        "shrine",
+        "mausoleum",
+        "name",
+        "origin"
+      ]
+    },
+    "answer": {
+      "ar": "القرية نشأت حول ضريح الولي الصوفي أبو سعيد خلف بن يحيى التميمي الباجي، الذي أقام بجبل المنار في القرن 12–13 م. في القرن 18 بنى أعيان تونس مساكنهم هناك.",
+      "fr": "Le village s'est développé autour du mausolée du maître soufi Abou Saïd Khalaf Ibn Yahya El Tamimi El Beji, installé sur la colline aux XIIe–XIIIe siècles. Au XVIIIe siècle, la bourgeoisie tunisoise y bâtit ses demeures.",
+      "en": "The village grew around the mausoleum of the Sufi master Abou Saïd Khalaf Ibn Yahya El Tamimi El Beji, who settled on the hill in the 12th–13th century. In the 18th century, Tunis notables built their residences there."
+    },
+    "verified": true,
+    "verify_note": "",
+    "source": "Dossier d'inscription UNESCO et sources historiques concordantes"
+  },
+  {
+    "id": "ennejma",
+    "keywords": {
+      "ar": [
+        "النجمة الزهراء",
+        "ديرلنجي",
+        "متحف",
+        "موسيقى"
+      ],
+      "fr": [
+        "ennejma",
+        "erlanger",
+        "palais",
+        "musée",
+        "musique",
+        "cmam"
+      ],
+      "en": [
+        "ennejma",
+        "erlanger",
+        "palace",
+        "museum",
+        "music"
+      ]
+    },
+    "answer": {
+      "ar": "قصر النجمة الزهراء، مقرّ البارون ديرلنجي، صار متحفاً ومقرّاً لمركز الموسيقى العربية والمتوسطية. التوقيت وثمن الدخول يتغيّروا — لازم تثبّت قبل ما تمشي.",
+      "fr": "Le palais Ennejma Ezzahra, demeure du baron d'Erlanger, est devenu un musée et abrite le Centre des musiques arabes et méditerranéennes. Horaires et tarif changent : à confirmer avant de vous déplacer.",
+      "en": "Ennejma Ezzahra, Baron d'Erlanger's palace, is now a museum and home to the Centre for Arab and Mediterranean Music. Opening hours and admission change — confirm before you go."
+    },
+    "verified": true,
+    "verify_note": "lieu vérifié ; horaires et tarif non confirmés",
+    "source": "Centre des musiques arabes et méditerranéennes (CMAM)"
+  },
+  {
+    "id": "access",
+    "keywords": {
+      "ar": [
+        "وصول",
+        "تجول",
+        "مشي",
+        "طريق",
+        "انزلاق",
+        "أمطار"
+      ],
+      "fr": [
+        "accès",
+        "marcher",
+        "ruelle",
+        "pente",
+        "glissement",
+        "pluie"
+      ],
+      "en": [
+        "access",
+        "walk",
+        "alley",
+        "slope",
+        "landslide",
+        "rain"
+      ]
+    },
+    "answer": {
+      "ar": "القرية ربوة بأزقّة مبلّطة ومنحدرات؛ في جانفي 2026 أمطار استثنائية سبّبت انزلاقات وأضراراً في بعض الواجهات. حالة بعض المسالك تتبدّل — أفضل تسأل على عين المكان.",
+      "fr": "Le village est un promontoire aux ruelles pavées et pentues ; en janvier 2026, des pluies exceptionnelles ont provoqué des glissements et endommagé des façades. L'état de certains accès évolue — à vérifier sur place.",
+      "en": "The village sits on a steep, cobbled headland; in January 2026 exceptional rainfall caused landslides and damaged façades. The state of some paths changes — check locally."
+    },
+    "verified": false,
+    "verify_note": "état actuel des accès non confirmé",
+    "source": ""
+  }
+]

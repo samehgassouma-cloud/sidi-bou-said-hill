@@ -1,0 +1,72 @@
+[
+  {
+    "id": "s1",
+    "label": {
+      "ar": "شنوّة البرنامج متاع اليوم؟",
+      "fr": "Quel est le programme du jour ?",
+      "en": "What's on today?"
+    },
+    "query": {
+      "ar": "البرنامج",
+      "fr": "programme",
+      "en": "events"
+    },
+    "verified": true
+  },
+  {
+    "id": "s2",
+    "label": {
+      "ar": "علاش الأبواب زرقاء؟",
+      "fr": "Pourquoi les portes sont bleues ?",
+      "en": "Why are the doors blue?"
+    },
+    "query": {
+      "ar": "أبواب",
+      "fr": "porte bleu",
+      "en": "blue doors"
+    },
+    "verified": true
+  },
+  {
+    "id": "s3",
+    "label": {
+      "ar": "شنوّة معنى تصنيف اليونسكو؟",
+      "fr": "Que change le classement UNESCO ?",
+      "en": "What does the UNESCO listing mean?"
+    },
+    "query": {
+      "ar": "اليونسكو",
+      "fr": "unesco",
+      "en": "unesco"
+    },
+    "verified": true
+  },
+  {
+    "id": "s4",
+    "label": {
+      "ar": "كيفاش نتجوّل في الأزقّة؟",
+      "fr": "Comment circuler dans les ruelles ?",
+      "en": "How do I get around the alleys?"
+    },
+    "query": {
+      "ar": "وصول",
+      "fr": "accès ruelle",
+      "en": "access alley"
+    },
+    "verified": true
+  },
+  {
+    "id": "s5",
+    "label": {
+      "ar": "وين المنطقة المُدرجة بالضبط؟",
+      "fr": "Quel est le périmètre inscrit ?",
+      "en": "What exactly is the inscribed area?"
+    },
+    "query": {
+      "ar": "منطقة",
+      "fr": "périmètre",
+      "en": "perimeter"
+    },
+    "verified": true
+  }
+]

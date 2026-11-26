@@ -1,0 +1,37 @@
+[
+  {
+    "id": "sc-village",
+    "knowledge_id": "unesco",
+    "title_key": "scene.village.title",
+    "layer": "village",
+    "verified": true
+  },
+  {
+    "id": "sc-doors",
+    "knowledge_id": "doors",
+    "title_key": "scene.doors.title",
+    "layer": "doors",
+    "verified": true
+  },
+  {
+    "id": "sc-shrine",
+    "knowledge_id": "saint",
+    "title_key": "scene.shrine.title",
+    "layer": "shrine",
+    "verified": true
+  },
+  {
+    "id": "sc-palace",
+    "knowledge_id": "ennejma",
+    "title_key": "scene.palace.title",
+    "layer": "palace",
+    "verified": true
+  },
+  {
+    "id": "sc-events",
+    "knowledge_id": null,
+    "title_key": "scene.events.title",
+    "layer": "events",
+    "verified": false
+  }
+]

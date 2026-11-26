@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 900" width="100%" height="100%"
+     role="img" aria-label="Écran Événements et carte — Rafik Sidi Bou Saïd">
+  <defs>
+    <linearGradient id="hdr3" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#123A5C"/>
+      <stop offset="1" stop-color="#2E7BB5"/>
+    </linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#BFD9EC"/>
+      <stop offset="1" stop-color="#8FC0DF"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="420" height="900" fill="#FAF7F0"/>
+
+  <!-- en-tête compact -->
+  <rect width="420" height="96" fill="url(#hdr3)"/>
+  <rect y="92" width="420" height="4" fill="#C9A227"/>
+  <text x="24" y="46" font-family="system-ui, sans-serif" font-size="17" font-weight="700" fill="#FFFFFF">Événements · الفعاليات</text>
+  <text x="24" y="68" font-family="system-ui, sans-serif" font-size="11" fill="#D8E6F2">Aujourd'hui · ملتقى الفنون</text>
+  <g>
+    <rect x="316" y="34" width="80" height="28" rx="14" fill="#FFFFFF" opacity="0.18"/>
+    <text x="356" y="53" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#FFFFFF">Filtrer</text>
+  </g>
+
+  <!-- carte schématique du promontoire (dessin original, non géoréférencé) -->
+  <g>
+    <rect x="0" y="96" width="420" height="250" fill="url(#sea)"/>
+    <!-- promontoire -->
+    <path d="M0 300 C60 250 120 210 200 206 C280 202 350 236 420 214 L420 346 L0 346 Z" fill="#EFE7D6"/>
+    <path d="M0 300 C60 250 120 210 200 206 C280 202 350 236 420 214" fill="none" stroke="#C9A227" stroke-width="2"/>
+    <!-- ruelles stylisées -->
+    <g stroke="#D9CDB4" stroke-width="3" fill="none">
+      <path d="M90 346 C110 310 150 300 190 292"/>
+      <path d="M250 346 C246 310 236 290 214 274"/>
+      <path d="M190 292 C230 286 280 274 330 262"/>
+    </g>
+    <!-- épingles -->
+    <g>
+      <path d="M190 292 c-9 -12 -6 -24 5 -28 c11 -4 21 4 21 15 c0 9 -12 18 -18 24 c-3 -3 -6 -7 -8 -11 z" fill="#123A5C"/>
+      <circle cx="200" cy="279" r="5" fill="#FFFFFF"/>
+      <path d="M320 262 c-9 -12 -6 -24 5 -28 c11 -4 21 4 21 15 c0 9 -12 18 -18 24 c-3 -3 -6 -7 -8 -11 z" fill="#C9A227"/>
+      <circle cx="330" cy="249" r="5" fill="#FFFFFF"/>
+    </g>
+    <!-- légende de fiabilité -->
+    <g>
+      <rect x="16" y="306" width="176" height="26" rx="13" fill="#FFFFFF" opacity="0.92"/>
+      <text x="28" y="323" font-family="system-ui, sans-serif" font-size="10" fill="#5A6570">◆ Position indicative — non géolocalisée</text>
+    </g>
+  </g>
+
+  <!-- carte événement 1 : donnée non vérifiée -->
+  <g>
+    <rect x="20" y="366" width="380" height="128" rx="18" fill="#FFFFFF" stroke="#E4DECF"/>
+    <rect x="20" y="366" width="6" height="128" rx="3" fill="#C9A227"/>
+    <text x="44" y="396" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#123A5C">Atelier d'art numérique</text>
+    <text x="44" y="416" font-family="'Noto Naskh Arabic', serif" font-size="13" fill="#123A5C" direction="rtl">ورشة الفن الرقمي</text>
+    <text x="44" y="440" font-family="system-ui, sans-serif" font-size="11.5" fill="#5A6570">Dans 30 min · durée 90 min · entrée [à confirmer]</text>
+    <g>
+      <rect x="44" y="452" width="196" height="24" rx="12" fill="#FFF3D6" stroke="#C9A227"/>
+      <text x="56" y="468" font-family="system-ui, sans-serif" font-size="10" fill="#8A6A12">⚠ Horaire et lieu non confirmés</text>
+    </g>
+    <g>
+      <rect x="256" y="450" width="128" height="28" rx="14" fill="#123A5C"/>
+      <text x="320" y="468" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11.5" fill="#FFFFFF">Itinéraire</text>
+    </g>
+  </g>
+
+  <!-- carte événement 2 : fait vérifié -->
+  <g>
+    <rect x="20" y="510" width="380" height="128" rx="18" fill="#FFFFFF" stroke="#E4DECF"/>
+    <rect x="20" y="510" width="6" height="128" rx="3" fill="#2E7BB5"/>
+    <text x="44" y="540" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#123A5C">Ennejma Ezzahra · CMAM</text>
+    <text x="44" y="560" font-family="'Noto Naskh Arabic', serif" font-size="13" fill="#123A5C" direction="rtl">قصر النجمة الزهراء</text>
+    <text x="44" y="584" font-family="system-ui, sans-serif" font-size="11.5" fill="#5A6570">Palais du baron d'Erlanger · musée et centre de musique</text>
+    <g>
+      <rect x="44" y="596" width="178" height="24" rx="12" fill="#E7F1F8" stroke="#2E7BB5"/>
+      <text x="56" y="612" font-family="system-ui, sans-serif" font-size="10" fill="#1B5C86">✓ Lieu vérifié · horaires à confirmer</text>
+    </g>
+  </g>
+
+  <!-- encart patrimoine -->
+  <g>
+    <rect x="20" y="654" width="380" height="92" rx="18" fill="#F6EEDA" stroke="#E0CE9A"/>
+    <text x="44" y="684" font-family="system-ui, sans-serif" font-size="12.5" font-weight="600" fill="#7A5C10">★ Patrimoine mondial UNESCO</text>
+    <text x="44" y="706" font-family="system-ui, sans-serif" font-size="11.5" fill="#7A5C10">Village inscrit le 25 juillet 2026 — critère (iii)</text>
+    <text x="44" y="726" font-family="system-ui, sans-serif" font-size="11" fill="#8A6A12">Zone inscrite 76,54 ha · zone tampon 84,44 ha</text>
+  </g>
+
+  <!-- rappel de conservation -->
+  <g>
+    <rect x="20" y="762" width="380" height="72" rx="18" fill="#FFFFFF" stroke="#E4DECF"/>
+    <text x="44" y="790" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#123A5C">Ruelles pavées · accessibilité</text>
+    <text x="44" y="812" font-family="system-ui, sans-serif" font-size="11" fill="#5A6570">Fortes pentes et pavés — état des accès à vérifier localement</text>
+  </g>
+
+  <!-- navigation -->
+  <rect x="0" y="856" width="420" height="44" fill="#123A5C"/>
+  <g font-family="system-ui, sans-serif" font-size="9.5" fill="#D8E6F2" text-anchor="middle">
+    <g>
+      <path d="M38 872 l10 -8 l10 8 v10 h-20 z" fill="none" stroke="#D8E6F2" stroke-width="1.4"/>
+      <text x="48" y="894">Home</text>
+    </g>
+    <g>
+      <rect x="138" y="866" width="20" height="16" rx="3" fill="none" stroke="#E3C567" stroke-width="1.4"/>
+      <path d="M138 872 h20" stroke="#E3C567" stroke-width="1.4"/>
+      <text x="148" y="894" fill="#E3C567">Events</text>
+    </g>
+    <g>
+      <path d="M262 882 v-12 a3 3 0 0 1 3 -3 h16 a3 3 0 0 1 3 3 v8 a3 3 0 0 1 -3 3 h-11 z"
+            fill="none" stroke="#D8E6F2" stroke-width="1.4"/>
+      <text x="272" y="894">Chat</text>
+    </g>
+    <g>
+      <circle cx="372" cy="871" r="5" fill="none" stroke="#D8E6F2" stroke-width="1.4"/>
+      <path d="M363 883 a9 9 0 0 1 18 0" fill="none" stroke="#D8E6F2" stroke-width="1.4"/>
+      <text x="372" y="894">Profile</text>
+    </g>
+  </g>
+</svg>

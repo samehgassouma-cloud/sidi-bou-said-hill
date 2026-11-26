@@ -1,0 +1,230 @@
+{
+ "meta": {
+  "source": "Positions vérifiées via Google Places (recherche de lieux). Plan schématique : les repères conservent leurs positions relatives réelles, le fond de plan est un dessin, pas une carte géoréférencée.",
+  "span_m": [
+   855,
+   603
+  ],
+  "hours_note": "Aucun horaire ni tarif n'est affiché comme certain — tout est marqué à vérifier."
+ },
+ "landmarks": [
+  {
+   "id": "tgm",
+   "art": "train",
+   "lat": 36.8705403,
+   "lon": 10.3420722,
+   "order": 1,
+   "name": {
+    "ar": "محطة TGM سيدي بوسعيد",
+    "fr": "Station TGM Sidi Bou Saïd",
+    "en": "Sidi Bou Saïd TGM station"
+   },
+   "text": {
+    "ar": "نقطة الوصول من تونس العاصمة والمرسى. من هنا تبدأ الصعود نحو القرية.",
+    "fr": "Point d'arrivée depuis Tunis et La Marsa. C'est d'ici que commence la montée vers le village.",
+    "en": "Arrival point from Tunis and La Marsa. The climb up to the village starts here."
+   },
+   "verified": true,
+   "verify_note": "lieu confirmé ; horaires et fréquence non confirmés",
+   "plan": [
+    8.0,
+    37.59
+   ],
+   "m": [
+    -541,
+    -24
+   ]
+  },
+  {
+   "id": "annabi",
+   "art": "house",
+   "lat": 36.8708935,
+   "lon": 10.3474055,
+   "order": 2,
+   "name": {
+    "ar": "دار العنابي",
+    "fr": "Dar El Annabi",
+    "en": "Dar El Annabi"
+   },
+   "text": {
+    "ar": "دار عائلية تحوّلت إلى بيت-متحف يعرض الحياة التونسية التقليدية، وسطحها يطلّ على القرية والخليج.",
+    "fr": "Demeure familiale devenue maison-musée de la vie tunisienne traditionnelle ; sa terrasse domine le village et le golfe.",
+    "en": "A family residence turned house-museum of traditional Tunisian life; its terrace overlooks the village and the gulf."
+   },
+   "verified": true,
+   "verify_note": "lieu confirmé ; tarif et horaires à confirmer sur place",
+   "plan": [
+    54.67,
+    32.55
+   ],
+   "m": [
+    -66,
+    -63
+   ]
+  },
+  {
+   "id": "nattes",
+   "art": "cafe",
+   "lat": 36.8711155,
+   "lon": 10.3481996,
+   "order": 3,
+   "name": {
+    "ar": "مقهى العليّة (قهوة الحصير)",
+    "fr": "Café des Nattes",
+    "en": "Café des Nattes"
+   },
+   "text": {
+    "ar": "المقهى التاريخي في أعلى الدرج المركزي، معروف بحصيره وبرواده من الفنانين والكتّاب.",
+    "fr": "Le café historique en haut de l'escalier central, connu pour ses nattes et pour les artistes et écrivains qui l'ont fréquenté.",
+    "en": "The historic café at the top of the central stairway, known for its rush mats and its artist and writer regulars."
+   },
+   "verified": true,
+   "verify_note": "lieu confirmé ; horaires et prix non confirmés",
+   "plan": [
+    61.62,
+    29.37
+   ],
+   "m": [
+    4,
+    -88
+   ]
+  },
+  {
+   "id": "mosquee",
+   "art": "dome",
+   "lat": 36.8712871,
+   "lon": 10.3482035,
+   "order": 4,
+   "name": {
+    "ar": "جامع سيدي بوسعيد",
+    "fr": "Mosquée de Sidi Bou Saïd",
+    "en": "Sidi Bou Saïd Mosque"
+   },
+   "text": {
+    "ar": "في قلب القرية، بنفس الأزرق والأبيض. القرية نشأت حول ضريح الولي أبي سعيد الباجي.",
+    "fr": "Au cœur du village, dans le même bleu et blanc. Le village s'est formé autour du mausolée du saint Abou Saïd El Béji.",
+    "en": "At the heart of the village, in the same blue and white. The village grew around the mausoleum of the saint Abou Saïd El Béji."
+   },
+   "verified": true,
+   "verify_note": "lieu confirmé ; accès aux non-musulmans et horaires de prière à respecter",
+   "plan": [
+    61.65,
+    26.92
+   ],
+   "m": [
+    5,
+    -107
+   ]
+  },
+  {
+   "id": "phare",
+   "art": "lighthouse",
+   "lat": 36.8724715,
+   "lon": 10.3484988,
+   "order": 5,
+   "name": {
+    "ar": "منارة سيدي بوسعيد",
+    "fr": "Phare de Sidi Bou Saïd",
+    "en": "Sidi Bou Saïd lighthouse"
+   },
+   "text": {
+    "ar": "في أعلى نقطة من الرأس، فوق موقع قديم يطلّ على خليج تونس.",
+    "fr": "Au point le plus haut du promontoire, dominant le golfe de Tunis.",
+    "en": "At the highest point of the headland, overlooking the Gulf of Tunis."
+   },
+   "verified": true,
+   "verify_note": "lieu confirmé ; ouverture au public non confirmée",
+   "plan": [
+    64.23,
+    10.0
+   ],
+   "m": [
+    31,
+    -238
+   ]
+  },
+  {
+   "id": "ennejma",
+   "art": "palace",
+   "lat": 36.8692056,
+   "lon": 10.3477793,
+   "order": 6,
+   "name": {
+    "ar": "قصر النجمة الزهراء",
+    "fr": "Ennejma Ezzahra",
+    "en": "Ennejma Ezzahra"
+   },
+   "text": {
+    "ar": "قصر البارون رودولف ديرلنجي، اليوم متحف ومركز الموسيقى العربية والمتوسطية. هو صاحب المسعى الذي فرض الأزرق والأبيض سنة 1915.",
+    "fr": "Le palais du baron Rodolphe d'Erlanger, aujourd'hui musée et Centre des musiques arabes et méditerranéennes. C'est par lui que le bleu et blanc fut imposé en 1915.",
+    "en": "Baron Rodolphe d'Erlanger's palace, now a museum and the Centre for Arab and Mediterranean Music. The 1915 blue-and-white rule came through him."
+   },
+   "verified": true,
+   "verify_note": "lieu confirmé ; horaires et tarif à confirmer auprès du CMAM",
+   "plan": [
+    57.94,
+    56.66
+   ],
+   "m": [
+    -33,
+    123
+   ]
+  },
+  {
+   "id": "delices",
+   "art": "terrace",
+   "lat": 36.8700429,
+   "lon": 10.3513774,
+   "order": 7,
+   "name": {
+    "ar": "مقهى سيدي شعبان (قهوة الدليس)",
+    "fr": "Café Sidi Chabaane (Café des Délices)",
+    "en": "Café Sidi Chabaane (Café des Délices)"
+   },
+   "text": {
+    "ar": "مدرّجات على حافة الجرف تطلّ على المرسى والبحر. المشهد هو السبب الرئيسي للزيارة.",
+    "fr": "Des terrasses en gradins au bord de la falaise, face au port et à la mer. C'est la vue qui fait le lieu.",
+    "en": "Stepped terraces on the cliff edge facing the marina and the sea. The view is the reason to come."
+   },
+   "verified": true,
+   "verify_note": "lieu confirmé ; prix signalés comme élevés par les visiteurs — à vérifier avant de commander",
+   "plan": [
+    89.42,
+    44.7
+   ],
+   "m": [
+    287,
+    31
+   ]
+  },
+  {
+   "id": "marina",
+   "art": "boat",
+   "lat": 36.8670125,
+   "lon": 10.3516719,
+   "order": 8,
+   "name": {
+    "ar": "مرسى سيدي بوسعيد",
+    "fr": "Port de plaisance de Sidi Bou Saïd",
+    "en": "Sidi Bou Saïd Marina"
+   },
+   "text": {
+    "ar": "في أسفل الجرف، نهاية الجولة: نزهة على حافة الميناء ومقاهي مطلّة على المراكب.",
+    "fr": "En contrebas de la falaise, fin du parcours : promenade sur le quai et cafés face aux bateaux.",
+    "en": "Below the cliff, the end of the walk: a stroll along the quay and cafés facing the boats."
+   },
+   "verified": true,
+   "verify_note": "lieu confirmé",
+   "plan": [
+    92.0,
+    88.0
+   ],
+   "m": [
+    314,
+    366
+   ]
+  }
+ ],
+ "verified": false,
+ "verify_note": "existence et positions des 8 repères vérifiées ; fond de plan schématique, non géoréférencé ; horaires, tarifs et ouverture au public non confirmés"
+}

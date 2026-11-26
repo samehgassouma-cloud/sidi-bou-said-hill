@@ -1,0 +1,45 @@
+{
+ "id": "unesco-zone",
+ "list_id": 1769,
+ "date": "2026-07-25",
+ "session": "48e session du Comité du patrimoine mondial, Busan",
+ "criterion": "(iii)",
+ "core_ha": 76.54,
+ "buffer_ha": 84.44,
+ "equiv_radius_m": {
+  "core": 494,
+  "core_plus_buffer": 716
+ },
+ "rank": {
+  "ar": "عاشر موقع تونسي مُدرَج (9 ثقافية + 1 طبيعي: الإشكل)",
+  "fr": "10e bien tunisien inscrit (9 culturels + 1 naturel : l'Ichkeul)",
+  "en": "Tunisia's 10th listed property (9 cultural + 1 natural: Ichkeul)"
+ },
+ "dossier": {
+  "ar": "مُلف أُودع في فيفري 2024 بإشراف وزارة الشؤون الثقافية والمعهد الوطني للتراث، بعنوان «قرية سيدي بوسعيد: قطب إلهام ثقافي وروحي في المتوسط»",
+  "fr": "Dossier déposé en février 2024 sous la supervision du ministère des Affaires culturelles et de l'INP, sous le titre « Le village de Sidi Bou Saïd : hub d'inspiration culturelle et spirituelle en Méditerranée »",
+  "en": "Nomination filed in February 2024 by the Ministry of Cultural Affairs and the INP, titled \"The village of Sidi Bou Saïd: a hub of cultural and spiritual inspiration in the Mediterranean\""
+ },
+ "why": {
+  "ar": "المعيار الثقافي (iii): شهادة استثنائية على تقليد ثقافي أو حضارة. القرية نشأت حول ضريح الولي الصوفي، ومن القرن 16 ربطت السلالات الحاكمة شرعيتها ببركته، ثم بنى البايات وأعيان تونس فيها مصايفهم — فاجتمعت التضاريس والعمارة والروحانية في مكان واحد.",
+  "fr": "Critère culturel (iii) : témoignage exceptionnel sur une tradition culturelle. Le village s'est formé autour du tombeau du saint soufi ; à partir du XVIe siècle les dynasties tunisiennes ont adossé leur légitimité à sa baraka, puis beys husseinites et grandes familles de Tunis y ont bâti leurs villégiatures — géomorphologie, architecture et spiritualité réunies en un seul lieu.",
+  "en": "Cultural criterion (iii): exceptional testimony to a cultural tradition. The village formed around the Sufi saint's tomb; from the 16th century Tunisian dynasties tied their legitimacy to his blessing, then Husainid beys and Tunis families built their retreats there — landform, architecture and spirituality in one place."
+ },
+ "scope": {
+  "ar": "⚠ المنطقة المُدرجة هي القلب التاريخي فقط، وهي أصغر من تراب البلدية. زون عازلة تحيط بها لحماية محيطها المباشر.",
+  "fr": "⚠ Le périmètre inscrit est le seul cœur historique, plus petit que le territoire communal ; une zone tampon protège ses abords immédiats.",
+  "en": "⚠ The inscribed perimeter covers only the historic core, smaller than the municipal territory; a buffer zone protects its immediate surroundings."
+ },
+ "intangible": {
+  "ar": "⚠ المالوف والعيساوية والياسمين وخرجة ليلة المولد تُشكّل هوية المكان الحيّة، لكنها لم تُصنَّف فردياً ضمن هذا القرار.",
+  "fr": "⚠ Malouf, Issaouia, jasmin et kharja de la nuit du Mouled font l'identité vivante du lieu mais n'ont pas été classés individuellement par cette décision.",
+  "en": "⚠ Malouf, Issaouia, jasmine and the Mouled-night kharja belong to the living identity of the place but were not individually listed by this decision."
+ },
+ "shape_note": {
+  "ar": "⚠ الحدود الرسمية للمنطقة المُدرجة غير متوفّرة هنا. الدائرتان تمثّلان المساحة الصحيحة (نصف قطر مكافئ)، وليس الحدّ الحقيقي.",
+  "fr": "⚠ Le tracé officiel n'est pas disponible ici. Les deux cercles représentent la surface exacte (rayon équivalent), pas la limite réelle.",
+  "en": "⚠ The official boundary isn't available here. The two circles show the exact area (equivalent radius), not the real limit."
+ },
+ "source": "UNESCO — Liste du patrimoine mondial n° 1769 ; décision de la 48e session (Busan, 25 juillet 2026)",
+ "verified": true
+}

@@ -1,0 +1,65 @@
+[
+  {
+    "id": "ev-01",
+    "title": {
+      "ar": "ورشة الفن الرقمي",
+      "fr": "Atelier d'art numérique",
+      "en": "Digital art workshop"
+    },
+    "when": {
+      "ar": "بعد 30 دقيقة",
+      "fr": "Dans 30 minutes",
+      "en": "In 30 minutes"
+    },
+    "place": {
+      "ar": "[المكان — يتطلّب تأكيد]",
+      "fr": "[Lieu — à confirmer]",
+      "en": "[Venue — to be confirmed]"
+    },
+    "price_tnd": null,
+    "verified": false,
+    "verify_note": "événement de démonstration : horaire, lieu et tarif non confirmés"
+  },
+  {
+    "id": "ev-02",
+    "title": {
+      "ar": "معرض ملتقى الفنون",
+      "fr": "Exposition du colloque des arts",
+      "en": "Arts Conference exhibition"
+    },
+    "when": {
+      "ar": "[التوقيت — يتطلّب تأكيد]",
+      "fr": "[Horaire — à confirmer]",
+      "en": "[Time — to be confirmed]"
+    },
+    "place": {
+      "ar": "وسط القرية",
+      "fr": "Centre du village",
+      "en": "Village centre"
+    },
+    "price_tnd": null,
+    "verified": false,
+    "verify_note": "programme non publié : à remplir par l'organisateur"
+  },
+  {
+    "id": "ev-03",
+    "title": {
+      "ar": "قصر النجمة الزهراء — زيارة",
+      "fr": "Ennejma Ezzahra — visite",
+      "en": "Ennejma Ezzahra — visit"
+    },
+    "when": {
+      "ar": "[التوقيت — يتطلّب تأكيد]",
+      "fr": "[Horaires — à confirmer]",
+      "en": "[Opening hours — to be confirmed]"
+    },
+    "place": {
+      "ar": "قصر البارون ديرلنجي",
+      "fr": "Palais du baron d'Erlanger",
+      "en": "Baron d'Erlanger's palace"
+    },
+    "price_tnd": null,
+    "verified": false,
+    "verify_note": "lieu réel ; horaires et tarif non confirmés"
+  }
+]
