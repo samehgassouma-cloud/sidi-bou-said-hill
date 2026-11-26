@@ -1,0 +1,10 @@
+{
+ "url": "",
+ "anon_key": "",
+ "table": "orders",
+ "poll_seconds": 5,
+ "note": "URL et clé anon sont saisies par l'exploitant : rien n'est écrit ici. Sans elles, l'application fonctionne en mode local (BroadcastChannel).",
+ "security": "La clé anon est publique dès qu'elle est dans une page HTML. Le schéma fourni limite la lecture aux commandes récentes ; un déploiement réel doit authentifier l'écran cuisine.",
+ "verified": false,
+ "verify_note": "schéma SQL fourni et testable ; aucune instance Supabase n'a été contactée depuis cet environnement"
+}
