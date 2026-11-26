@@ -314,7 +314,7 @@ function renderCard() {
     a.className = "chip gold";
     a.style.display = "inline-block";
     a.style.marginTop = "10px";
-    a.href = "cafe-reservation-3d.html";
+    a.href = "../amal-3/cafe-reservation-3d.html";
     a.textContent = t("cafe.open_cafe");
     a.onclick = (e) => {
       e.preventDefault();
