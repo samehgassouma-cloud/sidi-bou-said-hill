@@ -117,5 +117,4 @@ Aucune dépendance : bibliothèque standard Python uniquement.
 **Sameh Gassouma** — International Trainer · Tax Advisor
 
 TadreebPro.ai · samehgassouma@tadreebpro.ai
-WhatsApp : <span dir="ltr">+216 28 516 751</span> · <span dir="ltr">+216 22 022 624</span>
 [LinkedIn](https://linkedin.com/in/sameh-gassouma-ab58703b2)

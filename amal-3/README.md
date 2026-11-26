@@ -52,7 +52,7 @@ python prototype/build_kds.py        # شاشة المطبخ
 2. لصق عنوان المشروع والمفتاح العمومي في الصفحتين، ثم «اتصل».
 3. الطلبات تبدا تمشي بين الأجهزة. بلا إعداد، الكل يبقى محلّي.
 
-⚠ المفتاح العمومي يبان لأي زائر في كود الصفحة. المخطّط يحدّ القراءة والتحديث في آخر 6 ساعات،
+⚠ المفتاح العمومي يبان لأي زائر في كود الصفحة. المخطّط يحد القراءة والتحديث في آخر 6 ساعات،
 والنشر الحقيقي يلزمو تسجيل دخول لشاشة المطبخ.
 
 ---
@@ -77,5 +77,4 @@ python prototype/build_kds.py        # شاشة المطبخ
 **Sameh Gassouma** — International Trainer · Tax Advisor
 
 TadreebPro.ai · samehgassouma@tadreebpro.ai
-WhatsApp : <span dir="ltr">+216 28 516 751</span> · <span dir="ltr">+216 22 022 624</span>
 [LinkedIn](https://linkedin.com/in/sameh-gassouma-ab58703b2)
